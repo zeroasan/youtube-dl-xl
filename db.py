@@ -1,17 +1,15 @@
 import sqlite3
 import os
+from Configuration import db_path, db_schema_path
 
-db_filename = 'data.db'
-schema_filename = 'data_schema.sql'
+db_is_new = not os.path.exists(db_path)
 
-db_is_new = not os.path.exists(db_filename)
-
-conn = sqlite3.connect(db_filename)
+conn = sqlite3.connect(db_path)
 print 'DB connected.'
 
 if db_is_new:
     print 'Creating schema'
-    with open(schema_filename, 'rt') as f:
+    with open(db_schema_path, 'rt') as f:
         schema = f.read()
         conn.executescript(schema)
 else:

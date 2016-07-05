@@ -1,5 +1,7 @@
 import dl_info_service
 import subprocess
+import threading
+import time
 
 def download(url, dist):
     print 'start downloading: ' + url
@@ -11,4 +13,7 @@ def download(url, dist):
         print 'xxx'
 
 
-download("https://www.youtube.com/watch?v=HNOT_feL27Y", '')
+#download("https://www.youtube.com/watch?v=HNOT_feL27Y", '')
+#download("http://v.youku.com/v_show/id_XMTYyOTg3OTU2NA==?from=y1.3-dv-2016new-239-23143.225965.1-3", '')
+download("http://www.baidu.com", '')
+print 'after download'
