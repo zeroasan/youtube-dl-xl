@@ -11,8 +11,10 @@ __mark_as_download_sql__ = 'update video_info set isDownloaded=1 where url = ?'
 __mark_as_uploaded_sql__ = 'update video_info set isUploaded=1 where url = ?'
 __check_url_exists__ = 'select 1 from video_info where url = ?'
 
-__get_ready_to_downloaded_videos_sql__ = 'select ' + __column_names__ + ' from video_info where isDownloaded = 0 limit ? '
-__get_ready_to_uploaded_videos_sql__ = 'select ' + __column_names__ + ' from video_info where isUploaded = 0 and isDownloaded = 1 order by id limit ? '
+__get_ready_to_downloaded_videos_sql__ = 'select ' + __column_names__ + ' from video_info where isDownloaded = 0 and id >= ? order by id limit ? '
+__get_ready_to_uploaded_videos_sql__ = 'select ' + __column_names__ + ' from video_info where isUploaded = 0 and isDownloaded = 1 and id >= ? order by id limit ? '
+
+__clear_process_flag__ = 'update video_info set processing = 0'
 
 def getVideoInfo(url):
     cur = conn.execute(__get_video_info_sql__, (url,))
@@ -88,3 +90,19 @@ def getVideoInfoReadyToUploaded(count = sys.maxint):
 
         array.append(video_info)
     return array
+
+
+def clearProcessingFlag():
+    conn.execute(__clear_process_flag__)
+    conn.commit()
+
+def batchMarkProcessingFlag(videoArray):
+    #paramList = ''
+    #for i in range(0, len(videoArray) - 1):
+    #    paramList = paramList + ', ?'
+
+    #paramList = paramList[: -3]
+
+    update_processing_sql = 'update video_info set processing = 1 where dbid in ('+','.join(['?']*len(videoArray))+')'
+    conn.execute(update_processing_sql, ())
+    conn.commit()
