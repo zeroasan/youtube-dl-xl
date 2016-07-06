@@ -1,5 +1,5 @@
 def __getApptPath__():
-    return 'C:/Users/zhengv/PycharmProjects/youtube-dl-xl/'
+    return 'C:/__Work__/04-Github/youtube-dl-xl/'
 
 app_root_folder = __getApptPath__()
 
@@ -7,6 +7,9 @@ data_root_folder = app_root_folder + 'data/'
 
 db_path = data_root_folder + 'data.db'
 db_schema_path = data_root_folder + 'data_schema.sql'
+
+# Log file
+log_file_path = app_root_folder + '/logs/my.log'
 
 # number of download workers
 num_of_download_worker = 2

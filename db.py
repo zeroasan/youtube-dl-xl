@@ -19,4 +19,3 @@ else:
 #conn.execute(""" delete from video_info """)
 #conn.execute(""" insert into video_info (url, uploader, author,description) values('http://www.baidu.com', 'zw', 'zw', 'asdfsadfsadfsadf') """)
 
-

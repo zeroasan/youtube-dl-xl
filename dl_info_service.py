@@ -1,7 +1,7 @@
 from db import conn
 from video_info import VideoInfo
 from exception.DuplicateError import DuplicateError
-from threading import Lock
+from threading import RLock
 import sys
 
 __column_name_array__ = ['url', 'uploader', 'author', 'isDownloaded', 'isUploaded', 'description']
@@ -18,7 +18,7 @@ __get_ready_to_uploaded_videos_sql__ = 'select ' + ','.join(__select_column_name
 
 __clear_process_flag__ = 'update video_info set isProcessing = 0'
 
-dbAccessLock = Lock()
+dbAccessLock = RLock()
 
 def getVideoInfo(url):
     dbAccessLock.acquire()
