@@ -1,1 +1,1 @@
-delete from video_info;
+delete from video_info where description = '__test__';

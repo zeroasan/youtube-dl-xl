@@ -5,5 +5,6 @@ create table video_info (
     author      text,
     isDownloaded  integer default 0,
     isUploaded    integer default 0,
+    isProcessing  integer default 0,
     description text
 );
