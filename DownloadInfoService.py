@@ -1,4 +1,4 @@
-from DB1 import conn
+from DB import conn
 from VideoInfo import VideoInfo
 from exception.DuplicateError import DuplicateError
 from threading import RLock
