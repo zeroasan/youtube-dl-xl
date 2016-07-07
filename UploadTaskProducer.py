@@ -35,4 +35,4 @@ def start():
     uploadThread.setDaemon(True)
     uploadThread.start()
 
-    uploadQ.join();
+    return uploadThread

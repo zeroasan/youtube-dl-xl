@@ -1,5 +1,7 @@
+import os
+
 def __getApptPath__():
-    return 'C:/Users/zhengv/PycharmProjects/youtube-dl-xl/'
+    return os.path.dirname(os.path.realpath(__file__)) + "\\"
 
 app_root_folder = __getApptPath__()
 
@@ -27,3 +29,6 @@ no_upload_task_sleep_seconds = 5
 # when queue size is below this size, the producer will start to fetch more task
 queue_size_valve_to_fetch_download_task=5
 queue_size_valve_to_fetch_upload_task=5
+
+# page to start search video urls
+start_search_page_url = 'http://www.baidu.com'

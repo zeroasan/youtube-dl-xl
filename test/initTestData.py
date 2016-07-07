@@ -13,4 +13,4 @@ def __init_run_data__(filePath):
         conn.commit()
 
 __init_run_data__(__test_clean_data_sql_file__)
-__init_run_data__(__test_video_ready_to_download_sql_file__)
+#__init_run_data__(__test_video_ready_to_download_sql_file__)

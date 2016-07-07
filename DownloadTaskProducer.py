@@ -35,6 +35,5 @@ def start():
     downloadThread.setDaemon(True)
     downloadThread.start()
     logging.info('[Download Producer] Producer has been started.')
-
-    downloadQ.join();
+    return downloadThread
 

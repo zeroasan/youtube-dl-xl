@@ -1,3 +1,9 @@
 import DownloadTaskProducer
-import Uploader
+
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+thread = DownloadTaskProducer.start()
+thread.join()
 
