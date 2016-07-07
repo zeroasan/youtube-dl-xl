@@ -1,6 +1,6 @@
 from threading import Thread
 import time, logging, Queue
-import dl_info_service
+import DownloadInfoService
 from Configuration import download_task_fetch_count, \
     no_download_task_sleep_seconds, queue_size_valve_to_fetch_download_task
 
@@ -14,7 +14,7 @@ def downloadTaskProducer():
             continue
 
         # fetch video info from db when size of queue is less than certain size
-        videoArray = dl_info_service.getVideoInfoReadyToDownload(download_task_fetch_count)
+        videoArray = DownloadInfoService.getVideoInfoReadyToDownload(download_task_fetch_count)
         if len(videoArray) == 0:
             time.sleep(no_download_task_sleep_seconds)
             logging.info('[Download Producer] Todo download task loaded is empty, wait for %d seconds to fetch again.',
@@ -26,7 +26,7 @@ def downloadTaskProducer():
         logging.info('[Download Producer] Put %d tasks into download queue, current size is %d',
                      len(videoArray), downloadQ.qsize())
 
-        dl_info_service.batchMarkProcessingFlag(videoArray)
+        DownloadInfoService.batchMarkProcessingFlag(videoArray)
         logging.debug('[Download Producer] Mark new added video info to be processing status.')
 
 

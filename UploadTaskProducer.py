@@ -1,7 +1,7 @@
 import Queue
 from threading import Thread
 import time, logging
-import dl_info_service
+import DownloadInfoService
 from Configuration import upload_task_fetch_count, no_upload_task_sleep_seconds, queue_size_valve_to_fetch_upload_task
 
 uploadQ = Queue.Queue()
@@ -14,7 +14,7 @@ def uploadTaskProducer():
             continue
 
         # fetch video info from db when size of queue is less than certain size
-        videoArray = dl_info_service.getVideoInfoReadyToUpload(upload_task_fetch_count)
+        videoArray = DownloadInfoService.getVideoInfoReadyToUpload(upload_task_fetch_count)
         if len(videoArray) == 0:
             time.sleep(no_upload_task_sleep_seconds)
             logging.info('Todo upload task loaded is empty, wait for %d seconds to fetch again.',
@@ -25,7 +25,7 @@ def uploadTaskProducer():
             uploadQ.put(item)
         logging.info('Put %d tasks into upload queue, current size is %d', len(videoArray), uploadQ.qsize())
 
-        dl_info_service.batchMarkProcessingFlag(videoArray)
+        DownloadInfoService.batchMarkProcessingFlag(videoArray)
         print 'Add {} tasks to upload queue.'.format(`uploadQ.qsize()`)
 
 

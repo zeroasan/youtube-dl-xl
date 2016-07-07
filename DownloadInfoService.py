@@ -1,5 +1,5 @@
-from db import conn
-from video_info import VideoInfo
+from DB import conn
+from VideoInfo import VideoInfo
 from exception.DuplicateError import DuplicateError
 from threading import RLock
 import sys

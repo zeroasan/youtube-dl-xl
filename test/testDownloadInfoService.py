@@ -1,8 +1,8 @@
 import unittest
-import dl_info_service
-from video_info import VideoInfo
+import DownloadInfoService
+from VideoInfo import VideoInfo
 from exception.DuplicateError import DuplicateError
-from db import conn
+from DB import conn
 from Configuration import app_root_folder
 import sys
 
@@ -22,9 +22,9 @@ class DLInfoServiceTest(unittest.TestCase):
         video.url = 'http://testDuplicate.com'
         video.description = '__test__'
 
-        dl_info_service.addVideoInfo(video)
+        DownloadInfoService.addVideoInfo(video)
 
-        video2 = dl_info_service.getVideoInfo(video.url)
+        video2 = DownloadInfoService.getVideoInfo(video.url)
 
         self.assertIsNotNone(video2.id)
         self.assertIsNotNone(video2.url)
@@ -40,14 +40,14 @@ class DLInfoServiceTest(unittest.TestCase):
         video.url = 'http://testDuplicate.com'
         video.description = '__test__'
 
-        dl_info_service.addVideoInfo(video)
+        DownloadInfoService.addVideoInfo(video)
 
-        video2 = dl_info_service.getVideoInfo(video.url)
+        video2 = DownloadInfoService.getVideoInfo(video.url)
         self.assertEqual(video.url, video2.url, 'Video info gotten from db should equals to info inserted.')
 
-        #self.assertRaises(DpError, dl_info_service.addVideoInfo, [video,])
+        #self.assertRaises(DpError, DownloadInfoService.addVideoInfo, [video,])
         with self.assertRaises(DuplicateError):
-            dl_info_service.addVideoInfo(video2)
+            DownloadInfoService.addVideoInfo(video2)
 
 
     def test_add_video_default_isDownloaded_isUploaded_value(self):
@@ -55,9 +55,9 @@ class DLInfoServiceTest(unittest.TestCase):
         video.url = 'http://testAddDefaultValue'
         video.description = '__test__'
 
-        dl_info_service.addVideoInfo(video)
+        DownloadInfoService.addVideoInfo(video)
 
-        video2 = dl_info_service.getVideoInfo(video.url)
+        video2 = DownloadInfoService.getVideoInfo(video.url)
         self.assertEqual(video2.isDownloaded, 0)
         self.assertEqual(video2.isUploaded, 0)
 
@@ -67,12 +67,12 @@ class DLInfoServiceTest(unittest.TestCase):
         video.url = 'http://testMarkAsDownloaded.com'
         video.description = '__test__'
 
-        dl_info_service.addVideoInfo(video)
-        self.assertIsNotNone(dl_info_service.getVideoInfo(video.url))
+        DownloadInfoService.addVideoInfo(video)
+        self.assertIsNotNone(DownloadInfoService.getVideoInfo(video.url))
 
-        dl_info_service.markAsDownloaded(video.url)
+        DownloadInfoService.markAsDownloaded(video.url)
 
-        video2 = dl_info_service.getVideoInfo(video.url)
+        video2 = DownloadInfoService.getVideoInfo(video.url)
         self.assertEqual(video2.isDownloaded, 1)
 
 
@@ -81,12 +81,12 @@ class DLInfoServiceTest(unittest.TestCase):
         video.url = 'http://testMarkAsUploaded.com'
         video.description = '__test__'
 
-        dl_info_service.addVideoInfo(video)
-        self.assertIsNotNone(dl_info_service.getVideoInfo(video.url))
+        DownloadInfoService.addVideoInfo(video)
+        self.assertIsNotNone(DownloadInfoService.getVideoInfo(video.url))
 
-        dl_info_service.markAsUploaded(video.url)
+        DownloadInfoService.markAsUploaded(video.url)
 
-        video2 = dl_info_service.getVideoInfo(video.url)
+        video2 = DownloadInfoService.getVideoInfo(video.url)
         self.assertEqual(video2.isUploaded, 1)
 
 
@@ -94,46 +94,46 @@ class DLInfoServiceTest(unittest.TestCase):
         self.__init_run_data__(__test_video_ready_to_download_sql_file__)
 
         count = 2
-        array = dl_info_service.getVideoInfoReadyToDownload(count)
+        array = DownloadInfoService.getVideoInfoReadyToDownload(count)
         self.assertEqual(len(array), count)
 
         count = 3
-        array = dl_info_service.getVideoInfoReadyToDownload(count)
+        array = DownloadInfoService.getVideoInfoReadyToDownload(count)
         self.assertEqual(len(array), count)
 
     def test_get_video_ready_to_download_after_mark_download(self):
         self.__init_run_data__(__test_video_ready_to_download_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
         count1 = len(array)
         video = array.pop(0)
 
-        dl_info_service.markAsDownloaded(video.url)
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        DownloadInfoService.markAsDownloaded(video.url)
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
         count2 = len(array)
 
         self.assertEqual(count1 - 1, count2)
 
     def test_get_video_ready_to_download_for_given_count(self):
         self.__init_run_data__(__test_video_ready_to_upload_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToUpload()
+        array = DownloadInfoService.getVideoInfoReadyToUpload()
 
         count = 2
-        array = dl_info_service.getVideoInfoReadyToUpload(count)
+        array = DownloadInfoService.getVideoInfoReadyToUpload(count)
         self.assertEqual(len(array), count)
 
         count = 3
-        array = dl_info_service.getVideoInfoReadyToUpload(count)
+        array = DownloadInfoService.getVideoInfoReadyToUpload(count)
         self.assertEqual(len(array), count)
 
 
     def test_get_video_ready_to_download_after_mark_upload(self):
         self.__init_run_data__(__test_video_ready_to_upload_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToUpload()
+        array = DownloadInfoService.getVideoInfoReadyToUpload()
         count1 = len(array)
         video = array.pop(0)
 
-        dl_info_service.markAsUploaded(video.url)
-        array = dl_info_service.getVideoInfoReadyToUpload()
+        DownloadInfoService.markAsUploaded(video.url)
+        array = DownloadInfoService.getVideoInfoReadyToUpload()
         count2 = len(array)
 
         self.assertEqual(count1 - 1, count2)
@@ -141,35 +141,35 @@ class DLInfoServiceTest(unittest.TestCase):
 
     def test_clear_processing_flag(self):
         self.__init_run_data__(__test_video_downloading_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
         self.assertEqual(0, len(array))
-        dl_info_service.clearProcessingFlag()
+        DownloadInfoService.clearProcessingFlag()
 
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
         self.assertGreater(len(array), 0)
 
 
     def test_should_not_get_downloads_when_processing(self):
         self.__init_run_data__(__test_video_downloading_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
         self.assertEqual(0, len(array))
 
 
     def test_should_not_get_uploads_when_processing(self):
         self.__init_run_data__(__test_video_uploading_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToUpload()
+        array = DownloadInfoService.getVideoInfoReadyToUpload()
         self.assertEqual(0, len(array))
 
     def test_ready_to_download_change_after_batch_mark_processing(self):
         self.__init_run_data__(__test_video_ready_to_download_sql_file__)
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
 
         count1 = len(array)
 
         markCount = 3
-        dl_info_service.batchMarkProcessingFlag(array[0:markCount])
+        DownloadInfoService.batchMarkProcessingFlag(array[0:markCount])
 
-        array = dl_info_service.getVideoInfoReadyToDownload()
+        array = DownloadInfoService.getVideoInfoReadyToDownload()
         count2 = len(array)
 
         self.assertEqual(count1 - markCount, count2)

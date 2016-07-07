@@ -1,5 +1,5 @@
 def __getApptPath__():
-    return 'C:/__Work__/04-Github/youtube-dl-xl/'
+    return 'C:/Users/zhengv/PycharmProjects/youtube-dl-xl/'
 
 app_root_folder = __getApptPath__()
 

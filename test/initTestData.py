@@ -1,4 +1,4 @@
-from db import conn
+from DB import conn
 from Configuration import app_root_folder
 
 __test_clean_data_sql_file__ = app_root_folder + 'test/data/clean_data.sql'
