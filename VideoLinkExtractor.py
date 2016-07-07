@@ -1,11 +1,13 @@
 from threading import Thread
 import time, logging, Queue
+import urllib2
 
 from threading import Thread, Lock
 from pyquery import PyQuery
 #from lxml import etree
 from Configuration import app_root_folder, start_search_page_url
 import DownloadInfoService
+from exception.DuplicateError import DuplicateError
 from VideoInfo import VideoInfo
 
 # TODO remove log config
@@ -27,7 +29,7 @@ def loadHtmlMock(url) :
 
 
 def loadHtml(url) :
-    pass
+    return PyQuery(url)
 
 
 # TODO move this to a sperated file for customization purpose
@@ -36,7 +38,7 @@ def extractLink(pqContent):
     if pqContent is not None:
         videoLinkArray = pqContent('.yt-lockup-video').map(lambda i, e: 'https://www.youtube.com/watch?v=' + PyQuery(e).attr('data-context-item-id'))
         ret['videoLinks'] = videoLinkArray
-        searchLinkArray = pqContent('.search-pager a').map(lambda i, e: PyQuery(e).attr('href'))
+        searchLinkArray = pqContent('.search-pager a').map(lambda i, e: 'https://www.youtube.com' + PyQuery(e).attr('href'))
         # remove duplicate links
         searchLinkArray = list(set(searchLinkArray))
 
@@ -48,7 +50,7 @@ def extractLinkWorker(pendingSearchLinks):
     while len(pendingSearchLinks) > 0:
         search_page_url = pendingSearchLinks.pop()
 
-        pqContent = loadHtmlMock(search_page_url)
+        pqContent = loadHtml(search_page_url)
         extractInfo = extractLink(pqContent)
         videoLinks = extractInfo['videoLinks']
         searchLinks = extractInfo['searchLinks']
@@ -58,7 +60,10 @@ def extractLinkWorker(pendingSearchLinks):
             for videoLink in videoLinks:
                 videoInfo = VideoInfo()
                 videoInfo.url = videoLink
-                DownloadInfoService.addVideoInfo(videoInfo)
+                try:
+                    DownloadInfoService.addVideoInfo(videoInfo)
+                except DuplicateError:
+                    logging.info("URL [{}] has been already added.".format(videoInfo.url))
             print '[LinkExtractor] Add video links to db: [{}]'.format(' , \n'.join(videoLinks))
             # TODO add video links to db
 
@@ -84,7 +89,3 @@ def start():
     logger.info('[LinkExtractor] Producer has been started.')
 
     return downloadThread
-
-
-downloadThread = start()
-downloadThread.join()

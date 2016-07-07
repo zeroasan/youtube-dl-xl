@@ -31,4 +31,4 @@ queue_size_valve_to_fetch_download_task=5
 queue_size_valve_to_fetch_upload_task=5
 
 # page to start search video urls
-start_search_page_url = 'http://www.baidu.com'
+start_search_page_url = 'https://www.youtube.com/results?search_query=360+3d+4k'
