@@ -2,7 +2,7 @@ import unittest
 import DownloadInfoService
 from VideoInfo import VideoInfo
 from exception.DuplicateError import DuplicateError
-from DB import conn
+from DB1 import conn
 from Configuration import app_root_folder
 import sys
 
