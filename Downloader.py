@@ -1,4 +1,4 @@
-import dl_info_service
+import DownloadInfoService
 import time, logging, subprocess, threading
 from DownloadTaskProducer import downloadQ
 from Configuration import num_of_download_worker
@@ -13,7 +13,7 @@ def download(url):
     except subprocess.CalledProcessError as e:
         logging.warn("Exception: %s.", e.output)
     else:
-        dl_info_service.markAsDownloaded(url)
+        DownloadInfoService.markAsDownloaded(url)
         logging.info('Downloaded successfully: [%s] ', url)
 
 
