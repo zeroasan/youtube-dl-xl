@@ -3,6 +3,7 @@ import time, logging, Queue
 import DownloadInfoService
 from Configuration import download_task_fetch_count, \
     no_download_task_sleep_seconds, queue_size_valve_to_fetch_download_task
+import Configuration
 
 downloadQ = Queue.Queue()
 

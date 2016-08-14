@@ -9,48 +9,49 @@ from Configuration import app_root_folder, start_search_page_url
 import DownloadInfoService
 from exception.DuplicateError import DuplicateError
 from VideoInfo import VideoInfo
+from Configuration import runtime_search_max_page_number, getSearchPageURL
 
 # TODO remove log config
 import LogConfig
 
 logger = logging.getLogger(__name__)
 
-__html_file_path__ = app_root_folder + 'test/data/test.html'
-
-
-def loadHtmlMock(url) :
-    if url != 'http://www.baidu.com':
-        return None
-    # TODO Change this to read from online page
-    with open(__html_file_path__, 'rt') as f:
-        htmlContent = f.read()
-        return PyQuery(htmlContent)
-    return None
-
-
-def loadHtml(url) :
-    return PyQuery(url)
-
-
 # TODO move this to a sperated file for customization purpose
-def extractLink(pqContent):
+def extractLink(pyContent):
     ret = {'videoLinks':None, 'searchLinks':None}
-    if pqContent is not None:
-        videoLinkArray = pqContent('.yt-lockup-video').map(lambda i, e: 'https://www.youtube.com/watch?v=' + PyQuery(e).attr('data-context-item-id'))
+    if pyContent is not None:
+        videoLinkArray = pyContent('.yt-lockup-video').map(lambda i, e: 'https://www.youtube.com/watch?v=' + PyQuery(e).attr('data-context-item-id'))
         ret['videoLinks'] = videoLinkArray
-        searchLinkArray = pqContent('.search-pager a').map(lambda i, e: 'https://www.youtube.com' + PyQuery(e).attr('href'))
-        # remove duplicate links
-        searchLinkArray = list(set(searchLinkArray))
+
+        currentPageNumber = getCurrentPageNumber(pyContent)
+        if(currentPageNumber != None):
+            searchLinkArray = pyContent('.search-pager a').map(lambda i, e: getPageLinkIfValid(e, currentPageNumber))
+            searchLinkArray = list(set(searchLinkArray))
 
         ret['searchLinks'] = searchLinkArray
     return ret
 
 
+def getPageLinkIfValid(element, currentPageNumber):
+    pyElement = PyQuery(element)
+    pageNumberText = pyElement.find('span').text()
+
+    if not pageNumberText.isdigit():
+        return None
+
+    pageNumber = int(pageNumberText)
+    if currentPageNumber < pageNumber <= runtime_search_max_page_number:
+        return 'https://www.youtube.com' + pyElement.attr('href')
+    return None
+
+allSearchLinks = [];
 def extractLinkWorker(pendingSearchLinks):
+    allSearchSet = set(pendingSearchLinks)
     while len(pendingSearchLinks) > 0:
         search_page_url = pendingSearchLinks.pop()
 
-        pqContent = loadHtml(search_page_url)
+        pqContent = PyQuery(search_page_url)
+
         extractInfo = extractLink(pqContent)
         videoLinks = extractInfo['videoLinks']
         searchLinks = extractInfo['searchLinks']
@@ -67,9 +68,15 @@ def extractLinkWorker(pendingSearchLinks):
             print '[LinkExtractor] Add video links to db: [{}]'.format(' , \n'.join(videoLinks))
             # TODO add video links to db
 
+        newSearchLinks = [];
         if searchLinks is not None:
-            pendingSearchLinks = list(set(pendingSearchLinks).union(set(searchLinks)))
-            logger.debug( '[LinkExtractor] Extracted search links: [{}]'.format(' ,\n'.join(searchLinks)))
+            for newLink in searchLinks:
+                if newLink not in allSearchSet:
+                    pendingSearchLinks.append(newLink)
+                    newSearchLinks.append(newLink)
+                    allSearchSet.add(newLink)
+        if len(newSearchLinks) != 0:
+            logger.debug( '[LinkExtractor] Extracted new search links: [{}]'.format(' ,\n'.join(newSearchLinks)))
         else:
             logger.debug('[LinkExtractor] search links is none for url:[{}]'.format(search_page_url))
 
@@ -79,9 +86,17 @@ def extractLinkWorker(pendingSearchLinks):
 
     logger.warn('[LinkExtractor] Link Extractor stopped')
 
+
+def getCurrentPageNumber(pqContent):
+    pageNumber = pqContent('.search-pager button[disabled="True"] span').text()
+    if pageNumber != '' and pageNumber.isdigit():
+        return int(pageNumber)
+    else:
+        return None
+
 def start():
     pendingSearchLinks = []
-    pendingSearchLinks.append(start_search_page_url)
+    pendingSearchLinks.append(getSearchPageURL())
 
     downloadThread = Thread(target=extractLinkWorker, args=(pendingSearchLinks, ))
     downloadThread.setDaemon(True)

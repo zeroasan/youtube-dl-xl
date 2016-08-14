@@ -27,8 +27,15 @@ no_download_task_sleep_seconds = 5
 no_upload_task_sleep_seconds = 5
 
 # when queue size is below this size, the producer will start to fetch more task
-queue_size_valve_to_fetch_download_task=5
-queue_size_valve_to_fetch_upload_task=5
+queue_size_valve_to_fetch_download_task = 5
+queue_size_valve_to_fetch_upload_task = 5
 
-# page to start search video urls
-start_search_page_url = 'https://www.youtube.com/results?search_query=360+3d+4k'
+# runtime configuration
+runtime_search_text = '360 3d 4k'
+runtime_search_max_page_number = 100
+start_search_page_url = 'https://www.youtube.com/results?search_query='
+runtime_download_path = __getApptPath__() + 'downloads'
+enable_video_link_extractor = True
+
+def getSearchPageURL():
+    return start_search_page_url + runtime_search_text.replace(' ', '+')
