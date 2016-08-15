@@ -2,12 +2,23 @@ import DownloadInfoService
 import time, logging, subprocess, threading
 from DownloadTaskProducer import downloadQ
 from Configuration import num_of_download_worker
+import youtube_dl
 
+ydl_option = {
+    'writethumbnail' : True,
+    'format': 'bestvideo+bestaudio/best'
+}
 
 def download(url):
     logging.info('Start downloading [%s]. ', url)
     try:
+        ydl = youtube_dl.YoutubeDL(ydl_option)
         #process = subprocess.check_output(['youtube-dl', "-o downloads/video/%(uploader)s/%(title)s-%(id)s.%(ext)s", url], stderr=subprocess.STDOUT,shell=True)
+        info = ydl.extract_info(url=url, download=False)
+        info['formats'] = None
+
+        logging.info("***downloaded: [%s] - [%s]", info['title'], info['format'])
+
         logging.info('Execute youtube-dl with url: [%s]', url)
         time.sleep(3)
     except subprocess.CalledProcessError as e:

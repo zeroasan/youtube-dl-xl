@@ -32,7 +32,7 @@ queue_size_valve_to_fetch_upload_task = 5
 
 # runtime configuration
 runtime_search_text = '360 3d 4k'
-runtime_search_max_page_number = 100
+runtime_search_max_page_number = 30
 start_search_page_url = 'https://www.youtube.com/results?search_query='
 runtime_download_path = __getApptPath__() + 'downloads'
 enable_video_link_extractor = True
