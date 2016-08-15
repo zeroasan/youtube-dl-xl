@@ -23,6 +23,11 @@ downloadPath = raw_input('3. Please input the output folder of these videos.[def
 if downloadPath.strip() != "":
     Configuration.runtime_download_path = downloadPath
 
+
+disableExtractor = raw_input('4. Disable video link extractor(y/n).[default: ' + ('y' if Configuration.runtime_disable_extractor else 'n') + ']\n')
+if disableExtractor.strip() == "y" or disableExtractor.strip() == "Y":
+    Configuration.runtime_disable_extractor = True
+
 if not os.path.exists(Configuration.runtime_download_path):
     os.mkdir(Configuration.runtime_download_path)
 if not os.path.exists(Configuration.runtime_download_path + "/" + Configuration.runtime_search_text):
@@ -32,7 +37,10 @@ if not os.path.exists(Configuration.runtime_download_path + "/" + Configuration.
 DownloadTaskProducer.start()
 Downloader.start()
 
-VideoLinkExtractor.start()
+if not Configuration.runtime_disable_extractor:
+    VideoLinkExtractor.start()
+else:
+    logging.info('Video link extractor is disabled.')
 
 logging.info('App started ...')
 
