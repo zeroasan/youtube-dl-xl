@@ -22,22 +22,26 @@ def download(url):
     logging.info('Start downloading [%s]. ', url)
     try:
 
-        ydl_option['outtmpl'] = Configuration.runtime_download_path + '/%(uploader)s/%(title)s-%(id)s.%(ext)s'
+        ydl_option['outtmpl'] = Configuration.runtime_download_path + '/%(title)s-%(id)s.%(ext)s'
         ydl = youtube_dl.YoutubeDL(ydl_option)
 
         #process = subprocess.check_output(['youtube-dl', "-o downloads/video/%(uploader)s/%(title)s-%(id)s.%(ext)s", url], stderr=subprocess.STDOUT,shell=True)
         logging.info('Execute youtube-dl with url: [%s]', url)
         #info = ydl.extract_info(url=url, download=False)
         info = ydl.extract_info(url=url)
-        info[u'formats'] = [x for x in info['formats'] if __determine__(x, info['format_id'])]
+        # Redule the json info by removing unused format information
+        info['formats'] = [x for x in info['formats'] if __determine__(x, info['format_id'])]
 
-        fileName = 'workfile.text'
-        with open(fileName, 'w') as f:
+        jsonFileName = Configuration.runtime_download_path + '\{0} - ({1}).json'.format(info['title'], info['id'])
+
+        with open(jsonFileName, 'w') as f:
             json.dump(info, f, indent=1)
 
         logging.info("***downloaded: [%s] - [%s]", info['title'], info['format'])
         time.sleep(3)
-    except subprocess.CalledProcessError as e:
+
+    # Handle Exception
+    except Exception as e:
         logging.warn("Exception: %s.", e.output)
     else:
         DownloadInfoService.markAsDownloaded(url)

@@ -13,3 +13,5 @@ info[u'formats'] = [x for x in info['formats'] if determine(x, info['format_id']
 with open('workfile.text', 'w') as f:
     json.dump(info, f, indent=1)
 
+
+print '\{0} - ({1}).json'.format(info['title'], info['id'])
