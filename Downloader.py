@@ -32,7 +32,7 @@ def download(url):
         # Redule the json info by removing unused format information
         info['formats'] = [x for x in info['formats'] if __determine__(x, info['format_id'])]
 
-        jsonFileName = Configuration.runtime_download_path + '\{0} - ({1}).json'.format(info['title'], info['id'])
+        jsonFileName = Configuration.runtime_download_path + '\{0}-({1}).json'.format(info['title'], info['id'])
 
         with open(jsonFileName, 'w') as f:
             json.dump(info, f, indent=1)
