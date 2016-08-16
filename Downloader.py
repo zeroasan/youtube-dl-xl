@@ -9,7 +9,7 @@ ydl_option = {
     'format': 'bestvideo+bestaudio/best',
     'outtmpl': '',
     'writesubtitles': False,
-    'simulate': False
+    'simulate': True
 }
 
 def download(url):
@@ -29,7 +29,7 @@ def download(url):
 
         logging.info('[%s] after extract info', threading.currentThread().name)
 
-        jsonFileName = Configuration.getDownloadPath() + '/{}.json'.format(info['id'])
+        jsonFileName = Configuration.getDownloadPath() + '/{0}-({1}).json'.format(info['title'], info['id'])
 
         with open(jsonFileName, 'w') as f:
             json.dump(info, f, indent=1)
