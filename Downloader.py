@@ -2,24 +2,40 @@ import DownloadInfoService
 import time, logging, subprocess, threading
 from DownloadTaskProducer import downloadQ
 from Configuration import num_of_download_worker
+import Configuration
 import youtube_dl
+import json
 
 ydl_option = {
     'writethumbnail' : True,
-    'format': 'bestvideo+bestaudio/best'
+    'format': 'bestvideo+bestaudio/best',
+    'outtmpl': '',
+    'writesubtitles': True,
+    'simulate': True
 }
+
+
+def __determine__(videoFormat, formatId):
+    return videoFormat['format_id'] == formatId
 
 def download(url):
     logging.info('Start downloading [%s]. ', url)
     try:
+
+        ydl_option['outtmpl'] = Configuration.runtime_download_path + '/%(uploader)s/%(title)s-%(id)s.%(ext)s'
         ydl = youtube_dl.YoutubeDL(ydl_option)
+
         #process = subprocess.check_output(['youtube-dl', "-o downloads/video/%(uploader)s/%(title)s-%(id)s.%(ext)s", url], stderr=subprocess.STDOUT,shell=True)
-        info = ydl.extract_info(url=url, download=False)
-        info['formats'] = None
+        logging.info('Execute youtube-dl with url: [%s]', url)
+        #info = ydl.extract_info(url=url, download=False)
+        info = ydl.extract_info(url=url)
+        info[u'formats'] = [x for x in info['formats'] if __determine__(x, info['format_id'])]
+
+        fileName = 'workfile.text'
+        with open(fileName, 'w') as f:
+            json.dump(info, f, indent=1)
 
         logging.info("***downloaded: [%s] - [%s]", info['title'], info['format'])
-
-        logging.info('Execute youtube-dl with url: [%s]', url)
         time.sleep(3)
     except subprocess.CalledProcessError as e:
         logging.warn("Exception: %s.", e.output)

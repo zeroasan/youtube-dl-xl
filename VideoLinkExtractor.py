@@ -50,23 +50,22 @@ def extractLinkWorker(pendingSearchLinks):
     while len(pendingSearchLinks) > 0:
         search_page_url = pendingSearchLinks.pop()
 
-        pqContent = PyQuery(search_page_url)
+        pyContent = PyQuery(search_page_url)
 
-        extractInfo = extractLink(pqContent)
+        extractInfo = extractLink(pyContent)
         videoLinks = extractInfo['videoLinks']
         searchLinks = extractInfo['searchLinks']
 
         if videoLinks is not None:
-            # add video links to db
+            # Add video links to db
             for videoLink in videoLinks:
                 videoInfo = VideoInfo()
                 videoInfo.url = videoLink
                 try:
                     DownloadInfoService.addVideoInfo(videoInfo)
                 except DuplicateError:
-                    logging.info("URL [{}] has been already added.".format(videoInfo.url))
-            print '[LinkExtractor] Add video links to db: [{}]'.format(' , \n'.join(videoLinks))
-            # TODO add video links to db
+                    logging.info("URL [%s] has been already added.", videoInfo.url)
+            logger.info('[LinkExtractor] Add video links to db: [%s]', ' , '.join(videoLinks))
 
         newSearchLinks = [];
         if searchLinks is not None:
@@ -87,8 +86,8 @@ def extractLinkWorker(pendingSearchLinks):
     logger.warn('[LinkExtractor] Link Extractor stopped')
 
 
-def getCurrentPageNumber(pqContent):
-    pageNumber = pqContent('.search-pager button[disabled="True"] span').text()
+def getCurrentPageNumber(pyContent):
+    pageNumber = pyContent('.search-pager button[disabled="True"] span').text()
     if pageNumber != '' and pageNumber.isdigit():
         return int(pageNumber)
     else:
