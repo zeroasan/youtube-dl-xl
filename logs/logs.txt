@@ -1,0 +1,663 @@
+C:\Python27\python.exe "C:\Program Files (x86)\JetBrains\PyCharm Community Edition 2016.1.4\helpers\pydev\pydevd.py" --multiproc --qt-support --client 127.0.0.1 --port 55679 --file C:/__Work__/04-Github/youtube-dl-xl/Starter.py
+pydev debugger: process 1932 is connecting
+
+Connected to pydev debugger (build 145.1504)
+DB already exists, do you want to clear data and recreate DB(y/n)?[default: n]
+y
+INFO:root:DB file is deleted.
+INFO:root:DB connected.
+INFO:root:DB schema created.
+1. Please input the key words you want to search.[default: 360 3d 4k]
+
+2. Please input the maximum page number you want to search.[default: 30]
+5
+3. Please input the output folder of these videos.[default: C:\__Work__\04-Github\youtube-dl-xl\]
+
+4. Please input download threads number.[default: 1]
+5
+5. Disable video link extractor(y/n).[default: n]
+
+INFO:root:[Download Producer] Producer has been started.
+INFO:root:[DownloadWorker-0] start to work... 
+INFO:root:[DownloadWorker-1] start to work... 
+INFO:root:[DownloadWorker-2] start to work... 
+INFO:root:[DownloadWorker-3] start to work... 
+INFO:root:[DownloadWorker-4] start to work... 
+INFO:VideoLinkExtractor:[LinkExtractor] Producer has been started.
+INFO:root:App started ...
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /results?search_query=360+3d+4k HTTP/1.1" 200 None
+INFO:VideoLinkExtractor:[LinkExtractor] Detected 15 videos and 4 pages for Page-1
+INFO:VideoLinkExtractor:[LinkExtractor] Add video links to db: [https://www.youtube.com/watch?v=vQeN_YxstTo ,
+https://www.youtube.com/watch?v=HNOT_feL27Y ,
+https://www.youtube.com/watch?v=F2yvWDj5JLo ,
+https://www.youtube.com/watch?v=dh9L2ZtJKII ,
+https://www.youtube.com/watch?v=S2r_OyU229M ,
+https://www.youtube.com/watch?v=RQE-_QX6qc0 ,
+https://www.youtube.com/watch?v=mWpGyH2rGs8 ,
+https://www.youtube.com/watch?v=efDfcnvh67M ,
+https://www.youtube.com/watch?v=Jejdu1E3tKI ,
+https://www.youtube.com/watch?v=H6ErPC2AHlw ,
+https://www.youtube.com/watch?v=DLegxIts-Qg ,
+https://www.youtube.com/watch?v=kMrXQHEvp3w ,
+https://www.youtube.com/watch?v=M0WY4IgMEzI ,
+https://www.youtube.com/watch?v=2o523ZyTvqw ,
+https://www.youtube.com/watch?v=MaWTFcayodU]
+DEBUG:VideoLinkExtractor:[LinkExtractor] Extracted new search links: [https://www.youtube.com/results?sp=SFDqAwA%253D&q=360+3d+4k ,
+https://www.youtube.com/results?sp=SDzqAwA%253D&q=360+3d+4k ,
+https://www.youtube.com/results?sp=SCjqAwA%253D&q=360+3d+4k ,
+https://www.youtube.com/results?sp=SBTqAwA%253D&q=360+3d+4k]
+INFO:VideoLinkExtractor:[LinkExtractor] Sleep 3 seconds to continue.
+INFO:root:[Download Producer] Todo download task loaded is empty, wait for 5 seconds to fetch again.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[Download Producer] Put 10 tasks into download queue, current size is 5
+INFO:root:[DownloadWorker-0] Start downloading [https://www.youtube.com/watch?v=vQeN_YxstTo]. 
+INFO:root:[DownloadWorker-2] Start downloading [https://www.youtube.com/watch?v=F2yvWDj5JLo]. 
+INFO:root:[DownloadWorker-1] Start downloading [https://www.youtube.com/watch?v=HNOT_feL27Y]. 
+INFO:root:[DownloadWorker-3] Start downloading [https://www.youtube.com/watch?v=dh9L2ZtJKII]. 
+INFO:root:[DownloadWorker-4] Start downloading [https://www.youtube.com/watch?v=S2r_OyU229M]. 
+DEBUG:root:[Download Producer] Mark new added video info to be processing status.
+INFO:root:[Download Producer] Put 5 tasks into download queue, current size is 10
+DEBUG:root:[Download Producer] Mark new added video info to be processing status.
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /results?sp=SBTqAwA%253D&q=360+3d+4k HTTP/1.1" 200 None
+INFO:VideoLinkExtractor:[LinkExtractor] Detected 18 videos and 3 pages for Page-2
+INFO:VideoLinkExtractor:[LinkExtractor] Add video links to db: [https://www.youtube.com/watch?v=tbHMd91omxM ,
+https://www.youtube.com/watch?v=mQbSJFMmfA8 ,
+https://www.youtube.com/watch?v=ROSdzTUEWec ,
+https://www.youtube.com/watch?v=M_rn6qb6kU4 ,
+https://www.youtube.com/watch?v=2IcSgLSTXMk ,
+https://www.youtube.com/watch?v=FzfAaIvRIwQ ,
+https://www.youtube.com/watch?v=DxS0PcM84VY ,
+https://www.youtube.com/watch?v=WDGxepzOiLE ,
+https://www.youtube.com/watch?v=bKv7uhQdjMA ,
+https://www.youtube.com/watch?v=3KcS0tvgwI0 ,
+https://www.youtube.com/watch?v=Qxeo4sFkBNE ,
+https://www.youtube.com/watch?v=FeedQtYDd7A ,
+https://www.youtube.com/watch?v=9-ql6POwNSA ,
+https://www.youtube.com/watch?v=X8HN9xErYR8 ,
+https://www.youtube.com/watch?v=Pjk0R0dAZHw ,
+https://www.youtube.com/watch?v=F77JApIxcCY ,
+https://www.youtube.com/watch?v=RWjKCPMa4ao ,
+https://www.youtube.com/watch?v=P_5OSI8eGKQ]
+DEBUG:VideoLinkExtractor:[LinkExtractor] search links is none for url:[https://www.youtube.com/results?sp=SBTqAwA%253D&q=360+3d+4k]
+INFO:VideoLinkExtractor:[LinkExtractor] Sleep 3 seconds to continue.
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /results?sp=SCjqAwA%253D&q=360+3d+4k HTTP/1.1" 200 None
+INFO:VideoLinkExtractor:[LinkExtractor] Detected 16 videos and 2 pages for Page-3
+INFO:VideoLinkExtractor:[LinkExtractor] Add video links to db: [https://www.youtube.com/watch?v=YcQxJE_gsA8 ,
+https://www.youtube.com/watch?v=Qo2lFt4DRNA ,
+https://www.youtube.com/watch?v=yznQ1JSU8cw ,
+https://www.youtube.com/watch?v=cJmL_fLuARM ,
+https://www.youtube.com/watch?v=olzFJA97qBo ,
+https://www.youtube.com/watch?v=f_Hq6nybofc ,
+https://www.youtube.com/watch?v=PS51DWPxznk ,
+https://www.youtube.com/watch?v=UenNbWXX6x4 ,
+https://www.youtube.com/watch?v=SNsE5QoNucs ,
+https://www.youtube.com/watch?v=MtC1DiBNwQI ,
+https://www.youtube.com/watch?v=3KcS0tvgwI0 ,
+https://www.youtube.com/watch?v=vWDTVMqH234 ,
+https://www.youtube.com/watch?v=WyXdY8uRLq8 ,
+https://www.youtube.com/watch?v=X8HN9xErYR8 ,
+https://www.youtube.com/watch?v=wBEI39kwQv4 ,
+https://www.youtube.com/watch?v=RgH_ECkj5Do]
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=3KcS0tvgwI0] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=X8HN9xErYR8] has been already in DB.
+DEBUG:VideoLinkExtractor:[LinkExtractor] search links is none for url:[https://www.youtube.com/results?sp=SCjqAwA%253D&q=360+3d+4k]
+INFO:VideoLinkExtractor:[LinkExtractor] Sleep 3 seconds to continue.
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /results?sp=SDzqAwA%253D&q=360+3d+4k HTTP/1.1" 200 None
+INFO:VideoLinkExtractor:[LinkExtractor] Detected 17 videos and 1 pages for Page-4
+INFO:VideoLinkExtractor:[LinkExtractor] Add video links to db: [https://www.youtube.com/watch?v=LcieQdo0qH4 ,
+https://www.youtube.com/watch?v=cJmL_fLuARM ,
+https://www.youtube.com/watch?v=SNsE5QoNucs ,
+https://www.youtube.com/watch?v=NH8BwDhNbhk ,
+https://www.youtube.com/watch?v=I9TAPojKX6Y ,
+https://www.youtube.com/watch?v=osLoUA8COXg ,
+https://www.youtube.com/watch?v=olzFJA97qBo ,
+https://www.youtube.com/watch?v=UenNbWXX6x4 ,
+https://www.youtube.com/watch?v=41sgL2XXUvo ,
+https://www.youtube.com/watch?v=TVfgNfaTdiE ,
+https://www.youtube.com/watch?v=H6SsB3JYqQg ,
+https://www.youtube.com/watch?v=wBEI39kwQv4 ,
+https://www.youtube.com/watch?v=PsXUIo2KS2g ,
+https://www.youtube.com/watch?v=_zr5zU08jH0 ,
+https://www.youtube.com/watch?v=WyXdY8uRLq8 ,
+https://www.youtube.com/watch?v=mxT_BVOIAtw ,
+https://www.youtube.com/watch?v=NkDIEIsbGPc]
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=cJmL_fLuARM] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=SNsE5QoNucs] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=olzFJA97qBo] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=UenNbWXX6x4] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=wBEI39kwQv4] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=WyXdY8uRLq8] has been already in DB.
+DEBUG:VideoLinkExtractor:[LinkExtractor] search links is none for url:[https://www.youtube.com/results?sp=SDzqAwA%253D&q=360+3d+4k]
+INFO:VideoLinkExtractor:[LinkExtractor] Sleep 3 seconds to continue.
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /results?sp=SFDqAwA%253D&q=360+3d+4k HTTP/1.1" 200 None
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+INFO:VideoLinkExtractor:[LinkExtractor] Detected 18 videos and 0 pages for Page-5
+INFO:VideoLinkExtractor:[LinkExtractor] Add video links to db: [https://www.youtube.com/watch?v=sJsE6OIxPdg ,
+https://www.youtube.com/watch?v=el48gfzUjzQ ,
+https://www.youtube.com/watch?v=MtC1DiBNwQI ,
+https://www.youtube.com/watch?v=ff693IW6O4w ,
+https://www.youtube.com/watch?v=Dxd5vlFy5v0 ,
+https://www.youtube.com/watch?v=PS51DWPxznk ,
+https://www.youtube.com/watch?v=8lsB-P8nGSM ,
+https://www.youtube.com/watch?v=yLWqTl984s8 ,
+https://www.youtube.com/watch?v=wU9HWsS68_E ,
+https://www.youtube.com/watch?v=A6aRkhlqWuE ,
+https://www.youtube.com/watch?v=7gjR60TSn8Q ,
+https://www.youtube.com/watch?v=3OqjPqBjcQ4 ,
+https://www.youtube.com/watch?v=RgH_ECkj5Do ,
+https://www.youtube.com/watch?v=FJvPaak33I4 ,
+https://www.youtube.com/watch?v=C0R6F6oD0rE ,
+https://www.youtube.com/watch?v=FZFre2n-nIQ ,
+https://www.youtube.com/watch?v=P-jbYyoleJI ,
+https://www.youtube.com/watch?v=SmiMAJnj1qQ]
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=MtC1DiBNwQI] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=PS51DWPxznk] has been already in DB.
+INFO:root:[LinkExtractor] URL [https://www.youtube.com/watch?v=RgH_ECkj5Do] has been already in DB.
+DEBUG:VideoLinkExtractor:[LinkExtractor] search links is none for url:[https://www.youtube.com/results?sp=SFDqAwA%253D&q=360+3d+4k]
+INFO:VideoLinkExtractor:[LinkExtractor] Sleep 3 seconds to continue.
+WARNING:VideoLinkExtractor:[LinkExtractor] Link Extractor stopped
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[youtube] HNOT_feL27Y: Downloading webpage
+[youtube] S2r_OyU229M: Downloading webpage
+[youtube] dh9L2ZtJKII: Downloading webpage
+[youtube] F2yvWDj5JLo: Downloading webpage
+[youtube] vQeN_YxstTo: Downloading webpage
+[youtube] HNOT_feL27Y: Downloading video info webpage
+[youtube] dh9L2ZtJKII: Downloading video info webpage
+[youtube] vQeN_YxstTo: Downloading video info webpage
+[youtube] S2r_OyU229M: Downloading video info webpage
+[youtube] F2yvWDj5JLo: Downloading video info webpage
+[youtube] HNOT_feL27Y: Extracting video information
+[youtube] F2yvWDj5JLo: Extracting video information
+[youtube] S2r_OyU229M: Extracting video information
+[youtube] dh9L2ZtJKII: Extracting video information
+[youtube] vQeN_YxstTo: Extracting video information
+[youtube] HNOT_feL27Y: Downloading MPD manifest
+DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[youtube] HNOT_feL27Y: Downloading thumbnail ...
+[youtube] HNOT_feL27Y: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive-HNOT_feL27Y.jpg
+[download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive-HNOT_feL27Y.f313.webm
+[download]   0.4% of 135.64MiB at  1.03MiB/s ETA 02:11   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]   1.9% of 135.64MiB at 572.33KiB/s ETA 03:58  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]   2.4% of 135.64MiB at 385.19KiB/s ETA 05:51  WARNING:root:[DownloadWorker-2] Exception: 'module' object has no attribute '_strptime'.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING:root:[DownloadWorker-3] Exception: 'module' object has no attribute '_strptime'.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING:root:[DownloadWorker-4] Exception: 'module' object has no attribute '_strptime'.
+WARNING:root:[DownloadWorker-0] Exception: 'module' object has no attribute '_strptime'.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[DownloadWorker-2] Start downloading [https://www.youtube.com/watch?v=RQE-_QX6qc0]. 
+INFO:root:[DownloadWorker-3] Start downloading [https://www.youtube.com/watch?v=mWpGyH2rGs8]. 
+INFO:root:[DownloadWorker-4] Start downloading [https://www.youtube.com/watch?v=efDfcnvh67M]. 
+INFO:root:[DownloadWorker-0] Start downloading [https://www.youtube.com/watch?v=Jejdu1E3tKI]. 
+[download]   2.7% of 135.64MiB at 362.45KiB/s ETA 06:12  [youtube] mWpGyH2rGs8: Downloading webpage
+[youtube] Jejdu1E3tKI: Downloading webpage
+[youtube] RQE-_QX6qc0: Downloading webpage
+[youtube] efDfcnvh67M: Downloading webpage
+DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[youtube] Jejdu1E3tKI: Downloading video info webpage
+[youtube] efDfcnvh67M: Downloading video info webpage
+[youtube] RQE-_QX6qc0: Downloading video info webpage
+[youtube] mWpGyH2rGs8: Downloading video info webpage
+[download]   2.9% of 135.64MiB at 333.68KiB/s ETA 06:44  [youtube] efDfcnvh67M: Extracting video information
+[youtube] mWpGyH2rGs8: Extracting video information
+[youtube] Jejdu1E3tKI: Extracting video information
+[download]   3.0% of 135.64MiB at 292.54KiB/s ETA 07:40  [youtube] Jejdu1E3tKI: Downloading MPD manifest
+[youtube] efDfcnvh67M: Downloading MPD manifest
+[youtube] mWpGyH2rGs8: Downloading thumbnail ...
+[download]   3.1% of 135.64MiB at 280.80KiB/s ETA 07:59  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[youtube] mWpGyH2rGs8: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360�� Caleidoscope Sirius - Mandelbulb 3D fractal 4K Ultra HD-mWpGyH2rGs8.jpg
+[youtube] RQE-_QX6qc0: Extracting video information
+[download]   3.2% of 135.64MiB at 269.60KiB/s ETA 08:18  [youtube] Jejdu1E3tKI: Downloading thumbnail ...
+[download]   3.3% of 135.64MiB at 268.02KiB/s ETA 08:21  [youtube] efDfcnvh67M: Downloading thumbnail ...
+[download]   3.4% of 135.64MiB at 270.14KiB/s ETA 08:16  [youtube] Jejdu1E3tKI: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!-Jejdu1E3tKI.jpg
+[youtube] RQE-_QX6qc0: Downloading MPD manifest
+[download]   3.7% of 135.64MiB at 268.52KiB/s ETA 08:18  [youtube] efDfcnvh67M: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K _ test-efDfcnvh67M.jpg
+[download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360�� Caleidoscope Sirius - Mandelbulb 3D fractal 4K Ultra HD-mWpGyH2rGs8.f313.webm
+[download]   0.0% of 429.30MiB at 154.64KiB/s ETA 47:22  [youtube] RQE-_QX6qc0: Downloading thumbnail ...
+[download]   0.0% of 429.30MiB at 120.46KiB/s ETA 01:00:48[download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!-Jejdu1E3tKI.f313.webm
+[download]   0.0% of 429.30MiB at 132.85KiB/s ETA 55:11   WARNING: Requested formats are incompatible for merge and will be merged into mkv.
+[youtube] RQE-_QX6qc0: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\����ݧڧ� �� 360�� 3D �� Hellblade (4k)-RQE-_QX6qc0.jpg
+[download]   4.1% of 135.64MiB at 274.39KiB/s ETA 08:05  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   0.1% of 429.30MiB at 171.30KiB/s ETA 42:43   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\����ݧڧ� �� 360�� 3D �� Hellblade (4k)-RQE-_QX6qc0.f313.webm
+[download]   0.1% of 198.43MiB at 140.64KiB/s ETA 24:03  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K _ test-efDfcnvh67M.f305.mp4
+[download]   0.2% of 429.30MiB at 160.08KiB/s ETA 45:39   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   0.4% of 429.30MiB at 147.42KiB/s ETA 49:30   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   6.3% of 135.64MiB at 244.27KiB/s ETA 08:52  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   0.9% of 429.30MiB at 189.46KiB/s ETA 38:19   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   1.1% of 429.30MiB at 193.10KiB/s ETA 37:30   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   2.0% of 342.59MiB at 232.40KiB/s ETA 24:39  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  10.1% of 135.64MiB at 250.59KiB/s ETA 08:18  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   2.8% of 342.59MiB at 240.20KiB/s ETA 23:39  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   3.2% of 342.59MiB at 243.73KiB/s ETA 23:13  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  12.5% of 135.64MiB at 245.49KiB/s ETA 08:14  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  13.5% of 135.64MiB at 248.13KiB/s ETA 08:04  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   8.0% of 198.43MiB at 277.68KiB/s ETA 11:13  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   2.8% of 429.30MiB at 182.94KiB/s ETA 38:56   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.8% of 342.59MiB at 238.62KiB/s ETA 23:19  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   5.2% of 342.59MiB at 241.17KiB/s ETA 22:58  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   5.5% of 342.59MiB at 239.53KiB/s ETA 23:04  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   5.9% of 342.59MiB at 242.65KiB/s ETA 22:40  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.1% of 429.30MiB at 197.95KiB/s ETA 35:29   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   6.5% of 342.59MiB at 238.49KiB/s ETA 22:55  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.5% of 429.30MiB at 194.14KiB/s ETA 36:03   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.8% of 429.30MiB at 197.38KiB/s ETA 35:20   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   5.2% of 429.30MiB at 204.35KiB/s ETA 34:00   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   7.8% of 342.59MiB at 237.87KiB/s ETA 22:39  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   8.2% of 342.59MiB at 237.73KiB/s ETA 22:35  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  26.9% of 135.64MiB at 256.78KiB/s ETA 06:35  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   6.0% of 429.30MiB at 200.59KiB/s ETA 34:20   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   9.3% of 342.59MiB at 241.20KiB/s ETA 21:58  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  29.2% of 135.64MiB at 252.74KiB/s ETA 06:28  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  18.9% of 198.43MiB at 267.53KiB/s ETA 10:15  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.2% of 364.66MiB at 105.48KiB/s ETA 56:33   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.2% of 364.66MiB at 104.28KiB/s ETA 57:08   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  20.7% of 198.43MiB at 264.72KiB/s ETA 10:08  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   4.4% of 364.66MiB at 102.08KiB/s ETA 58:15   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  22.2% of 198.43MiB at 268.35KiB/s ETA 09:48  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  22.8% of 198.43MiB at 266.63KiB/s ETA 09:48  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  12.2% of 342.59MiB at 237.39KiB/s ETA 21:37  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   8.6% of 429.30MiB at 202.48KiB/s ETA 33:04   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   8.8% of 429.30MiB at 202.32KiB/s ETA 33:01   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  39.6% of 135.64MiB at 254.96KiB/s ETA 05:29  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  40.4% of 135.64MiB at 254.20KiB/s ETA 05:25  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  14.2% of 342.59MiB at 241.89KiB/s ETA 20:44  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  27.7% of 198.43MiB at 270.27KiB/s ETA 09:03  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  43.6% of 135.64MiB at 256.95KiB/s ETA 05:05  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  29.6% of 198.43MiB at 274.65KiB/s ETA 08:41  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  30.1% of 198.43MiB at 273.33KiB/s ETA 08:39  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  11.4% of 429.30MiB at 215.71KiB/s ETA 30:06   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  31.5% of 198.43MiB at 274.01KiB/s ETA 08:28  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  31.9% of 198.43MiB at 272.30KiB/s ETA 08:27  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  17.1% of 342.59MiB at 244.62KiB/s ETA 19:48  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  17.3% of 342.59MiB at 242.97KiB/s ETA 19:53  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  12.6% of 429.30MiB at 216.90KiB/s ETA 29:30   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  13.0% of 429.30MiB at 218.60KiB/s ETA 29:09   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  13.2% of 429.30MiB at 217.84KiB/s ETA 29:11   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  18.8% of 342.59MiB at 244.10KiB/s ETA 19:26  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  56.3% of 135.64MiB at 264.15KiB/s ETA 03:49  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  14.1% of 429.30MiB at 219.77KiB/s ETA 28:39   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  58.8% of 135.64MiB at 267.05KiB/s ETA 03:34  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  20.5% of 342.59MiB at 246.94KiB/s ETA 18:50  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  20.7% of 342.59MiB at 246.49KiB/s ETA 18:48  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   7.9% of 364.66MiB at 99.60KiB/s ETA 57:32    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  21.5% of 342.59MiB at 246.74KiB/s ETA 18:36  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  22.0% of 342.59MiB at 248.69KiB/s ETA 18:20  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  16.1% of 429.30MiB at 224.12KiB/s ETA 27:25   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  22.5% of 342.59MiB at 246.59KiB/s ETA 18:22  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  22.9% of 342.59MiB at 246.60KiB/s ETA 18:16  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  23.5% of 342.59MiB at 249.51KiB/s ETA 17:55  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  23.9% of 342.59MiB at 249.86KiB/s ETA 17:48  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  44.7% of 198.43MiB at 268.08KiB/s ETA 06:59  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  17.9% of 429.30MiB at 227.08KiB/s ETA 26:29   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  71.1% of 135.64MiB at 266.24KiB/s ETA 02:30  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]   9.5% of 364.66MiB at 101.29KiB/s ETA 55:34   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  47.5% of 198.43MiB at 269.11KiB/s ETA 06:36  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  48.0% of 198.43MiB at 267.93KiB/s ETA 06:34  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  75.8% of 135.64MiB at 269.32KiB/s ETA 02:04  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  19.6% of 429.30MiB at 228.54KiB/s ETA 25:47   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  10.1% of 364.66MiB at 99.90KiB/s ETA 56:00    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  10.2% of 364.66MiB at 99.61KiB/s ETA 56:06    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  79.7% of 135.64MiB at 269.43KiB/s ETA 01:44  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  10.4% of 364.66MiB at 98.99KiB/s ETA 56:20    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  81.6% of 135.64MiB at 269.16KiB/s ETA 01:35  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  54.3% of 198.43MiB at 273.15KiB/s ETA 05:40  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  30.6% of 342.59MiB at 261.37KiB/s ETA 15:31  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  11.1% of 364.66MiB at 100.33KiB/s ETA 55:09   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  22.6% of 429.30MiB at 235.90KiB/s ETA 24:02   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  31.8% of 342.59MiB at 262.23KiB/s ETA 15:12  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  87.6% of 135.64MiB at 269.81KiB/s ETA 01:03  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  11.5% of 364.66MiB at 99.38KiB/s ETA 55:25    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  89.6% of 135.64MiB at 269.98KiB/s ETA 00:53  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  11.7% of 364.66MiB at 99.14KiB/s ETA 55:24    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  33.7% of 342.59MiB at 262.17KiB/s ETA 14:47  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  12.1% of 364.66MiB at 99.86KiB/s ETA 54:47    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  12.2% of 364.66MiB at 99.65KiB/s ETA 54:49    DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  94.2% of 135.64MiB at 269.49KiB/s ETA 00:29  DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  25.6% of 429.30MiB at 239.01KiB/s ETA 22:47   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  25.8% of 429.30MiB at 238.24KiB/s ETA 22:48   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  12.9% of 364.66MiB at 100.87KiB/s ETA 53:44   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download]  26.3% of 429.30MiB at 237.81KiB/s ETA 22:42   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+[download] 100% of 135.64MiB in 08:26                    
+[download]  36.9% of 342.59MiB at 265.70KiB/s ETA 13:53  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive-HNOT_feL27Y.f251.webm
+[download] 100% of 1.59MiB in 00:02                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive-HNOT_feL27Y.webm"
+[download]  37.2% of 342.59MiB at 265.62KiB/s ETA 13:50  Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive-HNOT_feL27Y.f313.webm (pass -k to keep)
+Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive-HNOT_feL27Y.f251.webm (pass -k to keep)
+INFO:root:[DownloadWorker-1] after extract info
+[download]  13.1% of 364.66MiB at 100.55KiB/s ETA 53:46   DEBUG:root:[Download Producer] Queue size 6, is enough for download, sleep 5 second to check queue size
+INFO:root:[DownloadWorker-1] ******Downloading finished: [Great White Sharks 360 Video 4K!! - Close encounter on Amazing Virtual Dive] - [313 - 3840x2160 (DASH video)+251 - audio only (DASH audio)]
+[download]  13.2% of 364.66MiB at 100.63KiB/s ETA 53:40   INFO:root:[DownloadWorker-1] Downloaded successfully, mark [https://www.youtube.com/watch?v=HNOT_feL27Y] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[DownloadWorker-1] Start downloading [https://www.youtube.com/watch?v=H6ErPC2AHlw]. 
+[download]  67.9% of 198.43MiB at 280.37KiB/s ETA 03:52  [youtube] H6ErPC2AHlw: Downloading webpage
+[download]  68.0% of 198.43MiB at 280.57KiB/s ETA 03:51  [youtube] H6ErPC2AHlw: Downloading video info webpage
+[download]  68.2% of 198.43MiB at 280.83KiB/s ETA 03:49  [youtube] H6ErPC2AHlw: Extracting video information
+INFO:root:[Download Producer] Put 10 tasks into download queue, current size is 15
+DEBUG:root:[Download Producer] Mark new added video info to be processing status.
+DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[youtube] H6ErPC2AHlw: Downloading MPD manifest
+[download]  37.7% of 342.59MiB at 266.21KiB/s ETA 13:41  [youtube] H6ErPC2AHlw: Downloading thumbnail ...
+[download]  37.9% of 342.59MiB at 266.84KiB/s ETA 13:36  [youtube] H6ErPC2AHlw: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Vuze 360-degree 3D 4K VR camera-H6ErPC2AHlw.jpg
+[download]  27.2% of 429.30MiB at 238.87KiB/s ETA 22:19   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Vuze 360-degree 3D 4K VR camera-H6ErPC2AHlw.f137.mp4
+[download]   0.9% of 54.81MiB at 643.58KiB/s ETA 01:26  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  38.5% of 342.59MiB at 267.26KiB/s ETA 13:26  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]   7.8% of 54.81MiB at 408.13KiB/s ETA 02:06  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  10.1% of 54.81MiB at 356.01KiB/s ETA 02:21  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  12.6% of 54.81MiB at 337.07KiB/s ETA 02:25  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  40.6% of 342.59MiB at 271.21KiB/s ETA 12:47  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  14.0% of 364.66MiB at 99.47KiB/s ETA 53:46    DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  14.1% of 364.66MiB at 99.30KiB/s ETA 53:48    DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  29.5% of 429.30MiB at 239.84KiB/s ETA 21:31   DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  27.3% of 54.81MiB at 333.60KiB/s ETA 02:02  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  29.2% of 54.81MiB at 323.65KiB/s ETA 02:02  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  31.2% of 54.81MiB at 312.44KiB/s ETA 02:03  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  43.4% of 342.59MiB at 271.53KiB/s ETA 12:11  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  77.3% of 198.43MiB at 278.56KiB/s ETA 02:45  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  15.1% of 364.66MiB at 99.55KiB/s ETA 53:03    DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  79.3% of 198.43MiB at 280.79KiB/s ETA 02:29  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  46.5% of 54.81MiB at 322.62KiB/s ETA 01:32  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  16.0% of 364.66MiB at 102.82KiB/s ETA 50:49   DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  47.0% of 342.59MiB at 279.19KiB/s ETA 11:05  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  47.6% of 342.59MiB at 280.54KiB/s ETA 10:54  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  47.9% of 342.59MiB at 279.94KiB/s ETA 10:52  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  48.2% of 342.59MiB at 279.07KiB/s ETA 10:51  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  83.2% of 198.43MiB at 277.99KiB/s ETA 02:02  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  83.8% of 198.43MiB at 277.43KiB/s ETA 01:58  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  48.9% of 342.59MiB at 276.41KiB/s ETA 10:48  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  16.7% of 364.66MiB at 100.41KiB/s ETA 51:36   DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  85.4% of 198.43MiB at 276.09KiB/s ETA 01:47  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  86.2% of 198.43MiB at 276.33KiB/s ETA 01:41  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  71.2% of 54.81MiB at 283.78KiB/s ETA 00:56  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  17.3% of 364.66MiB at 100.79KiB/s ETA 51:02   DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  75.8% of 54.81MiB at 281.75KiB/s ETA 00:48  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  51.0% of 342.59MiB at 273.26KiB/s ETA 10:29  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  51.3% of 342.59MiB at 272.31KiB/s ETA 10:27  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  81.7% of 54.81MiB at 277.00KiB/s ETA 00:37  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  83.6% of 54.81MiB at 274.39KiB/s ETA 00:33  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  91.6% of 198.43MiB at 276.28KiB/s ETA 01:01  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  92.4% of 198.43MiB at 276.52KiB/s ETA 00:56  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  38.7% of 429.30MiB at 247.84KiB/s ETA 18:07   DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  38.9% of 429.30MiB at 247.33KiB/s ETA 18:06   DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  53.9% of 342.59MiB at 271.58KiB/s ETA 09:55  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  95.6% of 198.43MiB at 277.89KiB/s ETA 00:32  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  18.7% of 364.66MiB at 99.51KiB/s ETA 50:50    DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download] 100% of 54.81MiB in 03:26                    
+[download]  96.4% of 198.43MiB at 277.84KiB/s ETA 00:26  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Vuze 360-degree 3D 4K VR camera-H6ErPC2AHlw.f140.m4a
+[download]  18.8% of 364.66MiB at 99.35KiB/s ETA 50:51    DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download] 100% of 2.71MiB in 00:08                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Vuze 360-degree 3D 4K VR camera-H6ErPC2AHlw.mp4"
+[download]  55.5% of 342.59MiB at 271.89KiB/s ETA 09:34  DEBUG:root:[Download Producer] Queue size 15, is enough for download, sleep 5 second to check queue size
+[download]  55.5% of 342.59MiB at 271.94KiB/s ETA 09:33  Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Vuze 360-degree 3D 4K VR camera-H6ErPC2AHlw.f137.mp4 (pass -k to keep)
+Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Vuze 360-degree 3D 4K VR camera-H6ErPC2AHlw.f140.m4a (pass -k to keep)
+INFO:root:[DownloadWorker-1] after extract info
+[download]  40.3% of 429.30MiB at 246.85KiB/s ETA 17:43   INFO:root:[DownloadWorker-1] ******Downloading finished: [Vuze 360-degree 3D 4K VR camera] - [137 - 1920x1080 (DASH video)+140 - audio only (DASH audio)]
+[download]  40.4% of 429.30MiB at 246.56KiB/s ETA 17:42   INFO:root:[DownloadWorker-1] Downloaded successfully, mark [https://www.youtube.com/watch?v=H6ErPC2AHlw] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[DownloadWorker-1] Start downloading [https://www.youtube.com/watch?v=DLegxIts-Qg]. 
+[download]  56.0% of 342.59MiB at 272.57KiB/s ETA 09:26  [youtube] DLegxIts-Qg: Downloading webpage
+[download]  98.1% of 198.43MiB at 277.29KiB/s ETA 00:14  DEBUG:root:[Download Producer] Queue size 14, is enough for download, sleep 5 second to check queue size
+[download]  56.1% of 342.59MiB at 272.80KiB/s ETA 09:24  [youtube] DLegxIts-Qg: Downloading video info webpage
+[download]  40.5% of 429.30MiB at 246.52KiB/s ETA 17:40   [youtube] DLegxIts-Qg: Extracting video information
+[download]  19.1% of 364.66MiB at 99.26KiB/s ETA 50:42    [youtube] DLegxIts-Qg: Downloading MPD manifest
+[download]  98.7% of 198.43MiB at 277.45KiB/s ETA 00:09  [youtube] DLegxIts-Qg: Downloading thumbnail ...
+[download]  56.4% of 342.59MiB at 272.90KiB/s ETA 09:19  DEBUG:root:[Download Producer] Queue size 14, is enough for download, sleep 5 second to check queue size
+[youtube] DLegxIts-Qg: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K 2_1 60fps -high10-DLegxIts-Qg.jpg
+[download]  41.0% of 429.30MiB at 246.83KiB/s ETA 17:31   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K 2_1 60fps -high10-DLegxIts-Qg.f305.mp4
+[download]  19.4% of 364.66MiB at 99.41KiB/s ETA 50:28    DEBUG:root:[Download Producer] Queue size 14, is enough for download, sleep 5 second to check queue size
+[download] 100% of 198.43MiB in 12:13                    
+DEBUG:root:[Download Producer] Queue size 14, is enough for download, sleep 5 second to check queue size
+[download]  19.6% of 364.66MiB at 99.62KiB/s ETA 50:15    [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\����ݧڧ� �� 360�� 3D �� Hellblade (4k)-RQE-_QX6qc0.f251.webm
+[download] 100% of 2.24MiB in 00:02                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\����ݧڧ� �� 360�� 3D �� Hellblade (4k)-RQE-_QX6qc0.webm"
+[download]  39.6% of 8.35MiB at 305.03KiB/s ETA 00:16Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\����ݧڧ� �� 360�� 3D �� Hellblade (4k)-RQE-_QX6qc0.f313.webm (pass -k to keep)
+Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\����ݧڧ� �� 360�� 3D �� Hellblade (4k)-RQE-_QX6qc0.f251.webm (pass -k to keep)
+INFO:root:[DownloadWorker-2] after extract info
+[download]  41.4% of 429.30MiB at 245.38KiB/s ETA 17:30   DEBUG:root:[Download Producer] Queue size 14, is enough for download, sleep 5 second to check queue size
+INFO:root:[DownloadWorker-2] ******Downloading finished: [Ролик в 360° 3D — Hellblade (4k)] - [313 - 3840x2160 (DASH video)+251 - audio only (DASH audio)]
+[download]  41.5% of 429.30MiB at 245.18KiB/s ETA 17:28   INFO:root:[DownloadWorker-2] Downloaded successfully, mark [https://www.youtube.com/watch?v=RQE-_QX6qc0] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[DownloadWorker-2] Start downloading [https://www.youtube.com/watch?v=kMrXQHEvp3w]. 
+[youtube] kMrXQHEvp3w: Downloading webpage
+[download]  19.8% of 364.66MiB at 100.00KiB/s ETA 49:52   [youtube] kMrXQHEvp3w: Downloading video info webpage
+[download]  58.0% of 342.59MiB at 272.97KiB/s ETA 08:59  [youtube] kMrXQHEvp3w: Extracting video information
+[download]  41.6% of 429.30MiB at 244.97KiB/s ETA 17:27   DEBUG:root:[Download Producer] Queue size 13, is enough for download, sleep 5 second to check queue size
+[download]  19.9% of 364.66MiB at 100.06KiB/s ETA 49:48   [youtube] kMrXQHEvp3w: Downloading MPD manifest
+[download]  78.0% of 8.35MiB at 351.93KiB/s ETA 00:05[youtube] kMrXQHEvp3w: Downloading thumbnail ...
+[download]  58.2% of 342.59MiB at 272.79KiB/s ETA 08:57  [youtube] kMrXQHEvp3w: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 Video VR 4K �� TROPICAL ISLAND Just Cause VR �U CARDBOARD 360�UGEAR VR�U HTC VIVE �U Oculus Rift-kMrXQHEvp3w.jpg
+[download]  58.3% of 342.59MiB at 272.72KiB/s ETA 08:56  WARNING: Requested formats are incompatible for merge and will be merged into mkv.
+[download]  41.9% of 429.30MiB at 245.06KiB/s ETA 17:22   DEBUG:root:[Download Producer] Queue size 13, is enough for download, sleep 5 second to check queue size
+[download]  58.4% of 342.59MiB at 272.52KiB/s ETA 08:55  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 Video VR 4K �� TROPICAL ISLAND Just Cause VR �U CARDBOARD 360�UGEAR VR�U HTC VIVE �U Oculus Rift-kMrXQHEvp3w.f266.mp4
+[download] 100% of 8.35MiB in 00:23                  
+[download]  20.1% of 364.66MiB at 100.22KiB/s ETA 49:36   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K 2_1 60fps -high10-DLegxIts-Qg.f140.m4a
+[download] 100% of 79.54KiB in 00:00                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K 2_1 60fps -high10-DLegxIts-Qg.mp4"
+[download]  58.5% of 342.59MiB at 272.11KiB/s ETA 08:54  Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K 2_1 60fps -high10-DLegxIts-Qg.f305.mp4 (pass -k to keep)
+Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\360 3D 4K 2_1 60fps -high10-DLegxIts-Qg.f140.m4a (pass -k to keep)
+INFO:root:[DownloadWorker-1] after extract info
+INFO:root:[DownloadWorker-1] ******Downloading finished: [360 3D 4K 2:1 60fps -high10] - [305 - 3840x1920 (DASH video)+140 - audio only (DASH audio)]
+[download]  58.6% of 342.59MiB at 272.05KiB/s ETA 08:53  DEBUG:root:[Download Producer] Queue size 13, is enough for download, sleep 5 second to check queue size
+[download]   0.9% of 275.50MiB at 426.56KiB/s ETA 10:55  INFO:root:[DownloadWorker-1] Downloaded successfully, mark [https://www.youtube.com/watch?v=DLegxIts-Qg] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+[download]  58.8% of 342.59MiB at 272.19KiB/s ETA 08:51  INFO:root:[DownloadWorker-1] Start downloading [https://www.youtube.com/watch?v=M0WY4IgMEzI]. 
+[download]  42.4% of 429.30MiB at 245.49KiB/s ETA 17:12   [youtube] M0WY4IgMEzI: Downloading webpage
+[download]  42.4% of 429.30MiB at 245.48KiB/s ETA 17:11   [youtube] M0WY4IgMEzI: Downloading video info webpage
+[download]  59.0% of 342.59MiB at 272.21KiB/s ETA 08:48  [youtube] M0WY4IgMEzI: Extracting video information
+[download]   1.1% of 275.50MiB at 326.95KiB/s ETA 14:13  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  42.5% of 429.30MiB at 245.46KiB/s ETA 17:09   [youtube] M0WY4IgMEzI: Downloading MPD manifest
+[download]  42.6% of 429.30MiB at 245.53KiB/s ETA 17:07   [youtube] M0WY4IgMEzI: Downloading thumbnail ...
+[download]   1.5% of 275.50MiB at 290.15KiB/s ETA 15:57  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[youtube] M0WY4IgMEzI: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Disney's PETE'S DRAGON Impressive 360�� 4K Video (2016)-M0WY4IgMEzI.jpg
+[download]  42.8% of 429.30MiB at 245.14KiB/s ETA 17:05   WARNING: Requested formats are incompatible for merge and will be merged into mkv.
+[download]  20.5% of 364.66MiB at 100.34KiB/s ETA 49:17   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Disney's PETE'S DRAGON Impressive 360�� 4K Video (2016)-M0WY4IgMEzI.f266.mp4
+[download]  43.2% of 429.30MiB at 246.21KiB/s ETA 16:54   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  43.5% of 429.30MiB at 246.62KiB/s ETA 16:46   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  43.8% of 429.30MiB at 246.65KiB/s ETA 16:40   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  20.9% of 364.66MiB at 99.72KiB/s ETA 49:22    DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]   4.3% of 275.50MiB at 306.28KiB/s ETA 14:41  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]   6.7% of 159.28MiB at 392.30KiB/s ETA 06:27  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  45.1% of 429.30MiB at 247.71KiB/s ETA 16:13   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]   8.7% of 159.28MiB at 373.20KiB/s ETA 06:38  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]   6.6% of 275.50MiB at 314.63KiB/s ETA 13:57  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]   7.3% of 275.50MiB at 317.77KiB/s ETA 13:43  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  46.2% of 429.30MiB at 247.47KiB/s ETA 15:54   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  12.8% of 159.28MiB at 361.19KiB/s ETA 06:33  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  22.5% of 364.66MiB at 101.71KiB/s ETA 47:24   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  22.7% of 364.66MiB at 101.87KiB/s ETA 47:13   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  22.9% of 364.66MiB at 102.02KiB/s ETA 47:02   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  16.7% of 159.28MiB at 349.41KiB/s ETA 06:28  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  48.4% of 429.30MiB at 250.26KiB/s ETA 15:05   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  10.8% of 275.50MiB at 292.39KiB/s ETA 14:20  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  49.0% of 429.30MiB at 249.98KiB/s ETA 14:57   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  49.2% of 429.30MiB at 249.69KiB/s ETA 14:54   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  20.9% of 159.28MiB at 329.94KiB/s ETA 06:31  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  21.9% of 159.28MiB at 330.39KiB/s ETA 06:25  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  22.5% of 159.28MiB at 324.27KiB/s ETA 06:29  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  23.0% of 159.28MiB at 318.84KiB/s ETA 06:33  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  24.9% of 364.66MiB at 104.72KiB/s ETA 44:38   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  51.2% of 429.30MiB at 250.97KiB/s ETA 14:15   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  71.3% of 342.59MiB at 277.57KiB/s ETA 06:02  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  14.9% of 275.50MiB at 271.61KiB/s ETA 14:44  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  51.8% of 429.30MiB at 249.75KiB/s ETA 14:08   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  15.8% of 275.50MiB at 270.47KiB/s ETA 14:38  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  30.0% of 159.28MiB at 319.66KiB/s ETA 05:57  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  16.8% of 275.50MiB at 270.93KiB/s ETA 14:26  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  31.9% of 159.28MiB at 319.09KiB/s ETA 05:47  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  33.2% of 159.28MiB at 321.82KiB/s ETA 05:38  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  74.3% of 342.59MiB at 277.00KiB/s ETA 05:25  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  74.7% of 342.59MiB at 277.00KiB/s ETA 05:20  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  26.4% of 364.66MiB at 104.29KiB/s ETA 43:54   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  54.3% of 429.30MiB at 249.44KiB/s ETA 13:25   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  38.1% of 159.28MiB at 321.83KiB/s ETA 05:13  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  26.7% of 364.66MiB at 103.66KiB/s ETA 43:59   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  55.3% of 429.30MiB at 250.43KiB/s ETA 13:03   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  42.2% of 159.28MiB at 330.70KiB/s ETA 04:45  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  27.3% of 364.66MiB at 104.31KiB/s ETA 43:22   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  56.3% of 429.30MiB at 250.78KiB/s ETA 12:46   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  78.5% of 342.59MiB at 278.12KiB/s ETA 04:30  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  23.5% of 275.50MiB at 271.68KiB/s ETA 13:13  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  79.3% of 342.59MiB at 278.03KiB/s ETA 04:20  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  24.6% of 275.50MiB at 272.99KiB/s ETA 12:58  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  25.1% of 275.50MiB at 272.89KiB/s ETA 12:54  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  57.8% of 429.30MiB at 249.88KiB/s ETA 12:22   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  58.1% of 429.30MiB at 249.97KiB/s ETA 12:17   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  50.9% of 159.28MiB at 321.48KiB/s ETA 04:09  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  52.0% of 159.28MiB at 321.91KiB/s ETA 04:03  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  59.1% of 429.30MiB at 250.67KiB/s ETA 11:57   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  27.7% of 275.50MiB at 270.36KiB/s ETA 12:33  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  28.3% of 275.50MiB at 271.40KiB/s ETA 12:24  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  82.7% of 342.59MiB at 276.16KiB/s ETA 03:39  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  29.6% of 364.66MiB at 105.07KiB/s ETA 41:41   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  60.3% of 429.30MiB at 249.79KiB/s ETA 11:38   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  60.7% of 429.30MiB at 250.29KiB/s ETA 11:29   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  30.7% of 275.50MiB at 271.04KiB/s ETA 12:01  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  30.3% of 364.66MiB at 105.54KiB/s ETA 41:05   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  85.1% of 342.59MiB at 276.33KiB/s ETA 03:08  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  30.5% of 364.66MiB at 105.29KiB/s ETA 41:04   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  32.8% of 275.50MiB at 272.77KiB/s ETA 11:34  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  30.7% of 364.66MiB at 105.06KiB/s ETA 41:02   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  86.9% of 342.59MiB at 276.90KiB/s ETA 02:45  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  65.2% of 159.28MiB at 314.62KiB/s ETA 03:00  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  88.0% of 342.59MiB at 278.02KiB/s ETA 02:30  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  35.3% of 275.50MiB at 273.47KiB/s ETA 11:06  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  35.9% of 275.50MiB at 274.23KiB/s ETA 10:59  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  89.1% of 342.59MiB at 277.60KiB/s ETA 02:17  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  65.0% of 429.30MiB at 252.71KiB/s ETA 10:08   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  65.3% of 429.30MiB at 252.72KiB/s ETA 10:02   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  38.0% of 275.50MiB at 275.10KiB/s ETA 10:35  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  32.3% of 364.66MiB at 105.57KiB/s ETA 39:55   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  73.7% of 159.28MiB at 313.98KiB/s ETA 02:16  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  39.9% of 275.50MiB at 278.24KiB/s ETA 10:09  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  40.5% of 275.50MiB at 278.89KiB/s ETA 10:01  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  92.8% of 342.59MiB at 279.31KiB/s ETA 01:30  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  93.4% of 342.59MiB at 279.98KiB/s ETA 01:22  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  41.8% of 275.50MiB at 277.89KiB/s ETA 09:50  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  33.9% of 364.66MiB at 107.35KiB/s ETA 38:20   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  79.9% of 159.28MiB at 311.89KiB/s ETA 01:44  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  69.4% of 429.30MiB at 255.92KiB/s ETA 08:46   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  95.8% of 342.59MiB at 281.16KiB/s ETA 00:51  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  34.7% of 364.66MiB at 108.26KiB/s ETA 37:31   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  44.7% of 275.50MiB at 277.64KiB/s ETA 09:21  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  70.6% of 429.30MiB at 255.99KiB/s ETA 08:25   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  45.9% of 275.50MiB at 278.67KiB/s ETA 09:07  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  71.2% of 429.30MiB at 256.11KiB/s ETA 08:15   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  35.5% of 364.66MiB at 108.35KiB/s ETA 37:03   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  35.5% of 364.66MiB at 108.16KiB/s ETA 37:04   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  72.2% of 429.30MiB at 256.66KiB/s ETA 07:56   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  35.8% of 364.66MiB at 107.94KiB/s ETA 37:01   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  49.2% of 275.50MiB at 280.47KiB/s ETA 08:31  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  36.0% of 364.66MiB at 107.65KiB/s ETA 37:01   DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download] 100% of 342.59MiB in 20:55                    
+[download]  49.9% of 275.50MiB at 278.85KiB/s ETA 08:27  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  93.5% of 159.28MiB at 311.79KiB/s ETA 00:33  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!-Jejdu1E3tKI.f251.webm
+[download]  95.0% of 159.28MiB at 314.01KiB/s ETA 00:26  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download] 100% of 2.37MiB in 00:03                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!-Jejdu1E3tKI.webm"
+[download]  36.4% of 364.66MiB at 107.92KiB/s ETA 36:41   Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!-Jejdu1E3tKI.f313.webm (pass -k to keep)
+[download]  95.3% of 159.28MiB at 314.26KiB/s ETA 00:24  Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!-Jejdu1E3tKI.f251.webm (pass -k to keep)
+INFO:root:[DownloadWorker-0] after extract info
+[download]  73.8% of 429.30MiB at 256.84KiB/s ETA 07:28   INFO:root:[DownloadWorker-0] ******Downloading finished: [[4K] King Kong 360 the Ride POV - Nighttime Studio Tour - World's Largest 3D Experience Ever!] - [313 - 3840x2160 (DASH video)+251 - audio only (DASH audio)]
+[download]  50.9% of 275.50MiB at 279.28KiB/s ETA 08:15  DEBUG:root:[Download Producer] Queue size 12, is enough for download, sleep 5 second to check queue size
+[download]  74.0% of 429.30MiB at 256.89KiB/s ETA 07:24   INFO:root:[DownloadWorker-0] Downloaded successfully, mark [https://www.youtube.com/watch?v=Jejdu1E3tKI] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[DownloadWorker-0] Start downloading [https://www.youtube.com/watch?v=2o523ZyTvqw]. 
+[download]  51.0% of 275.50MiB at 279.33KiB/s ETA 08:14  [youtube] 2o523ZyTvqw: Downloading webpage
+[download]  96.3% of 159.28MiB at 313.99KiB/s ETA 00:19  [youtube] 2o523ZyTvqw: Downloading video info webpage
+[download]  96.5% of 159.28MiB at 313.97KiB/s ETA 00:18  [youtube] 2o523ZyTvqw: Extracting video information
+[download]  74.2% of 429.30MiB at 256.70KiB/s ETA 07:21   [youtube] 2o523ZyTvqw: Downloading MPD manifest
+[download]  74.2% of 429.30MiB at 256.64KiB/s ETA 07:21   DEBUG:root:[Download Producer] Queue size 11, is enough for download, sleep 5 second to check queue size
+[download]  97.0% of 159.28MiB at 314.02KiB/s ETA 00:15  [youtube] 2o523ZyTvqw: Downloading thumbnail ...
+[download]  97.3% of 159.28MiB at 314.00KiB/s ETA 00:14  [youtube] 2o523ZyTvqw: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Enterprise at home (360�� 3D 4K)-2o523ZyTvqw.jpg
+[download]  74.4% of 429.30MiB at 256.67KiB/s ETA 07:18   WARNING: Requested formats are incompatible for merge and will be merged into mkv.
+[download]  36.7% of 364.66MiB at 107.67KiB/s ETA 36:36   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Enterprise at home (360�� 3D 4K)-2o523ZyTvqw.f313.webm
+[download]   0.3% of 41.28MiB at 482.89KiB/s ETA 01:27DEBUG:root:[Download Producer] Queue size 11, is enough for download, sleep 5 second to check queue size
+[download]  11.4% of 41.28MiB at 972.49KiB/s ETA 00:38DEBUG:root:[Download Producer] Queue size 11, is enough for download, sleep 5 second to check queue size
+[download]  75.0% of 429.30MiB at 256.41KiB/s ETA 07:07   DEBUG:root:[Download Producer] Queue size 11, is enough for download, sleep 5 second to check queue size
+[download] 100% of 159.28MiB in 08:42                    
+[download]  75.4% of 429.30MiB at 256.48KiB/s ETA 07:02   DEBUG:root:[Download Producer] Queue size 11, is enough for download, sleep 5 second to check queue size
+[download]  20.5% of 41.28MiB at 528.58KiB/s ETA 01:03[download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Disney's PETE'S DRAGON Impressive 360�� 4K Video (2016)-M0WY4IgMEzI.f251.webm
+[download] 100% of 1.16MiB in 00:01                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Disney's PETE'S DRAGON Impressive 360�� 4K Video (2016)-M0WY4IgMEzI.mkv"
+[download]  75.6% of 429.30MiB at 256.57KiB/s ETA 06:58   Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Disney's PETE'S DRAGON Impressive 360�� 4K Video (2016)-M0WY4IgMEzI.f266.mp4 (pass -k to keep)
+INFO:root:[DownloadWorker-1] after extract info
+Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Disney's PETE'S DRAGON Impressive 360�� 4K Video (2016)-M0WY4IgMEzI.f251.webm (pass -k to keep)
+INFO:root:[DownloadWorker-1] ******Downloading finished: [Disney's PETE'S DRAGON Impressive 360° 4K Video (2016)] - [266 - 3840x2160 (DASH video)+251 - audio only (DASH audio)]
+[download]  37.4% of 364.66MiB at 108.00KiB/s ETA 36:04   DEBUG:root:[Download Producer] Queue size 11, is enough for download, sleep 5 second to check queue size
+[download]  75.8% of 429.30MiB at 256.81KiB/s ETA 06:53   INFO:root:[DownloadWorker-1] Downloaded successfully, mark [https://www.youtube.com/watch?v=M0WY4IgMEzI] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+[download]  54.3% of 275.50MiB at 280.44KiB/s ETA 07:39  INFO:root:[DownloadWorker-1] Start downloading [https://www.youtube.com/watch?v=MaWTFcayodU]. 
+[download]  37.4% of 364.66MiB at 108.03KiB/s ETA 36:02   [youtube] MaWTFcayodU: Downloading webpage
+[download]  25.5% of 41.28MiB at 464.92KiB/s ETA 01:07[youtube] MaWTFcayodU: Downloading video info webpage
+[download]  76.0% of 429.30MiB at 256.87KiB/s ETA 06:51   [youtube] MaWTFcayodU: Extracting video information
+[download]  26.3% of 41.28MiB at 451.09KiB/s ETA 01:09[youtube] MaWTFcayodU: Downloading MPD manifest
+[download]  37.5% of 364.66MiB at 108.06KiB/s ETA 35:58   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  26.8% of 41.28MiB at 435.34KiB/s ETA 01:11[youtube] MaWTFcayodU: Downloading thumbnail ...
+[download]  76.1% of 429.30MiB at 256.84KiB/s ETA 06:48   [youtube] MaWTFcayodU: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\�� VR 360 4K �� FALLOUT 4 Part 1 NUKED WORLD �UCARDBOARD VR �U GEAR VR �U OCULUS RIFT �U 360 degree-MaWTFcayodU.jpg
+[download]  54.8% of 275.50MiB at 279.48KiB/s ETA 07:36  WARNING: Requested formats are incompatible for merge and will be merged into mkv.
+[download]  37.6% of 364.66MiB at 107.86KiB/s ETA 35:59   [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\�� VR 360 4K �� FALLOUT 4 Part 1 NUKED WORLD �UCARDBOARD VR �U GEAR VR �U OCULUS RIFT �U 360 degree-MaWTFcayodU.f266.mp4
+[download]   0.1% of 183.57MiB at 564.16KiB/s ETA 05:32  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  55.3% of 275.50MiB at 278.92KiB/s ETA 07:31  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  76.8% of 429.30MiB at 256.53KiB/s ETA 06:37   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  37.9% of 364.66MiB at 107.55KiB/s ETA 35:54   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  56.8% of 275.50MiB at 278.87KiB/s ETA 07:17  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]   3.6% of 183.57MiB at 266.16KiB/s ETA 11:21  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  77.8% of 429.30MiB at 255.89KiB/s ETA 06:21   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  50.7% of 41.28MiB at 329.06KiB/s ETA 01:03DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  58.6% of 275.50MiB at 278.20KiB/s ETA 06:59  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]   6.3% of 183.57MiB at 265.29KiB/s ETA 11:03  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  38.8% of 364.66MiB at 107.09KiB/s ETA 35:34   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  38.9% of 364.66MiB at 106.92KiB/s ETA 35:35   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]   8.4% of 183.57MiB at 264.08KiB/s ETA 10:51  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  67.3% of 41.28MiB at 299.04KiB/s ETA 00:46DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  80.2% of 429.30MiB at 256.25KiB/s ETA 05:39   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  39.2% of 364.66MiB at 106.33KiB/s ETA 35:34   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  12.3% of 183.57MiB at 286.61KiB/s ETA 09:35  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  39.5% of 364.66MiB at 106.44KiB/s ETA 35:21   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  39.7% of 364.66MiB at 106.58KiB/s ETA 35:11   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  14.2% of 183.57MiB at 280.36KiB/s ETA 09:35  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  64.0% of 275.50MiB at 275.88KiB/s ETA 06:07  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  91.6% of 41.28MiB at 286.11KiB/s ETA 00:12DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  96.8% of 41.28MiB at 292.76KiB/s ETA 00:04DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  82.8% of 429.30MiB at 255.93KiB/s ETA 04:56   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download] 100% of 41.28MiB in 02:27                  
+[download]  65.7% of 275.50MiB at 275.43KiB/s ETA 05:51  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Enterprise at home (360�� 3D 4K)-2o523ZyTvqw.f140.m4a
+[download]  17.7% of 183.57MiB at 276.23KiB/s ETA 09:20  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  58.8% of 4.03MiB at 375.00KiB/s ETA 00:04DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download]  40.7% of 364.66MiB at 106.21KiB/s ETA 34:43   DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+[download] 100% of 4.03MiB in 00:11                  
+[ffmpeg] Merging formats into "C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Enterprise at home (360�� 3D 4K)-2o523ZyTvqw.mkv"
+[download]  83.6% of 429.30MiB at 255.56KiB/s ETA 04:41   Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Enterprise at home (360�� 3D 4K)-2o523ZyTvqw.f313.webm (pass -k to keep)
+Deleting original file C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Enterprise at home (360�� 3D 4K)-2o523ZyTvqw.f140.m4a (pass -k to keep)
+INFO:root:[DownloadWorker-0] after extract info
+INFO:root:[DownloadWorker-0] ******Downloading finished: [Enterprise at home (360° 3D 4K)] - [313 - 3840x2160 (DASH video)+140 - audio only (DASH audio)]
+[download]  67.5% of 275.50MiB at 276.10KiB/s ETA 05:32  DEBUG:root:[Download Producer] Queue size 10, is enough for download, sleep 5 second to check queue size
+INFO:root:[DownloadWorker-0] Downloaded successfully, mark [https://www.youtube.com/watch?v=2o523ZyTvqw] to downloaded in DB.
+WARNING: Parameter outtmpl is bytes, but should be a unicode string. Put  from __future__ import unicode_literals  at the top of your code file or consider switching to Python 3.x.
+INFO:root:[DownloadWorker-0] Start downloading [https://www.youtube.com/watch?v=tbHMd91omxM]. 
+[download]  20.4% of 183.57MiB at 282.55KiB/s ETA 08:49  [youtube] tbHMd91omxM: Downloading webpage
+[download]  40.8% of 364.66MiB at 106.01KiB/s ETA 34:43   [youtube] tbHMd91omxM: Downloading video info webpage
+[download]  40.9% of 364.66MiB at 106.02KiB/s ETA 34:42   [youtube] tbHMd91omxM: Extracting video information
+[download]  20.9% of 183.57MiB at 282.04KiB/s ETA 08:47  [youtube] tbHMd91omxM: Downloading MPD manifest
+[download]  68.2% of 275.50MiB at 276.88KiB/s ETA 05:24  DEBUG:root:[Download Producer] Queue size 9, is enough for download, sleep 5 second to check queue size
+[download]  41.0% of 364.66MiB at 106.17KiB/s ETA 34:33   [youtube] tbHMd91omxM: Downloading thumbnail ...
+[download]  21.5% of 183.57MiB at 285.09KiB/s ETA 08:37  [youtube] tbHMd91omxM: Writing thumbnail to: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Sony Xperia Z5 Compact 360�� 4K video-tbHMd91omxM.jpg
+[download]  68.5% of 275.50MiB at 276.98KiB/s ETA 05:20  [download] Destination: C:\__Work__\04-Github\youtube-dl-xl\downloads\360 3d 4k\Sony Xperia Z5 Compact 360�� 4K video-tbHMd91omxM.f313.webm
+[download]  68.7% of 275.50MiB at 277.18KiB/s ETA 05:18  DEBUG:root:[Download Producer] Queue size 9, is enough for download, sleep 5 second to check queue size

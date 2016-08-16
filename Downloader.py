@@ -1,72 +1,62 @@
+import time, logging, threading, json, copy, youtube_dl
 import DownloadInfoService
-import time, logging, subprocess, threading
-from DownloadTaskProducer import downloadQ
-from Configuration import num_of_download_worker
 import Configuration
-import youtube_dl
-import json
+from DownloadTaskProducer import videoLinkQ
 
+# Download options for youtube-dl
 ydl_option = {
     'writethumbnail' : True,
     'format': 'bestvideo+bestaudio/best',
     'outtmpl': '',
-    'writesubtitles': True,
-    'simulate': True
+    'writesubtitles': False,
+    'simulate': False
 }
 
-
-def __determine__(videoFormat, formatId):
-    return videoFormat['format_id'] == formatId
-
 def download(url):
-    logging.info('Start downloading [%s]. ', url)
     try:
+        #copy an instance
+        runtime_ydl_option = copy.copy(ydl_option)
 
-        ydl_option['outtmpl'] = Configuration.runtime_download_path + '/%(title)s-%(id)s.%(ext)s'
-        ydl = youtube_dl.YoutubeDL(ydl_option)
+        runtime_ydl_option['outtmpl'] = Configuration.getDownloadPath() + '/%(title)s-%(id)s.%(ext)s'
+        ydl = youtube_dl.YoutubeDL(runtime_ydl_option)
 
         #process = subprocess.check_output(['youtube-dl', "-o downloads/video/%(uploader)s/%(title)s-%(id)s.%(ext)s", url], stderr=subprocess.STDOUT,shell=True)
-        logging.info('Execute youtube-dl with url: [%s]', url)
+        logging.info('[%s] Start downloading [%s]. ', threading.currentThread().name, url)
         #info = ydl.extract_info(url=url, download=False)
         info = ydl.extract_info(url=url)
         # Redule the json info by removing unused format information
-        info['formats'] = [x for x in info['formats'] if __determine__(x, info['format_id'])]
+        #info['formats'] = [x for x in info['formats'] if __determine__(x, info['format_id'])]
 
-        jsonFileName = Configuration.runtime_download_path + '\{0}-({1}).json'.format(info['title'], info['id'])
+        logging.info('[%s] after extract info', threading.currentThread().name)
+
+        jsonFileName = Configuration.getDownloadPath() + '/{}.json'.format(info['id'])
 
         with open(jsonFileName, 'w') as f:
             json.dump(info, f, indent=1)
 
-        logging.info("***downloaded: [%s] - [%s]", info['title'], info['format'])
+        logging.info("[%s] ******Downloading finished: [%s] - [%s]", threading.currentThread().name, info['title'], info['format'])
         time.sleep(3)
 
     # Handle Exception
     except Exception as e:
-        logging.warn("Exception: %s.", e.output)
+        logging.warn("[%s] Exception: %s.", threading.currentThread().name, e.message)
     else:
         DownloadInfoService.markAsDownloaded(url)
-        logging.info('Downloaded successfully: [%s] ', url)
+        logging.info('[%s] Downloaded successfully, mark [%s] to downloaded in DB.', threading.currentThread().name, url)
 
 
 def download_worker():
     logging.info('[%s] start to work... ', threading.currentThread().name)
     while True:
         # threadLock.acquire()
-        item = downloadQ.get()
+        item = videoLinkQ.get()
         # threadLock.release()
         download(item.url)
-        downloadQ.task_done()
-
-
-
+        videoLinkQ.task_done()
 
 def start():
-    for i in range(num_of_download_worker):
-        t = threading.Thread(target=download_worker, name='DownloadWorker-' + `i`)
-        t.daemon = True
-        t.start()
+    for i in range(Configuration.runtime_num_of_download_worker):
+        downloadWorker = threading.Thread(target=download_worker, name='DownloadWorker-' + `i`)
+        downloadWorker.setDaemon(True)
+        downloadWorker.start()
 
-
-#download("https://www.youtube.com/watch?v=HNOT_feL27Y", '')
-#download("http://v.youku.com/v_show/id_XMTYyOTg3OTU2NA==?from=y1.3-dv-2016new-239-23143.225965.1-3", '')
-#print 'after download'

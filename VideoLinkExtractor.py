@@ -1,32 +1,33 @@
-from threading import Thread
 import time, logging, Queue
-import urllib2
-
 from threading import Thread, Lock
 from pyquery import PyQuery
-#from lxml import etree
-from Configuration import app_root_folder, start_search_page_url
 import DownloadInfoService
 from exception.DuplicateError import DuplicateError
 from VideoInfo import VideoInfo
-from Configuration import runtime_search_max_page_number, getSearchPageURL
+from Configuration import getSearchPageURL
+import Configuration
 
 # TODO remove log config
 import LogConfig
 
 logger = logging.getLogger(__name__)
 
+youtube_url_prefix = 'https://www.youtube.com/watch?v='
+
 # TODO move this to a sperated file for customization purpose
 def extractLink(pyContent):
     ret = {'videoLinks':None, 'searchLinks':None}
     if pyContent is not None:
-        videoLinkArray = pyContent('.yt-lockup-video').map(lambda i, e: 'https://www.youtube.com/watch?v=' + PyQuery(e).attr('data-context-item-id'))
+        currentPageNumber = getCurrentPageNumber(pyContent)
+
+        videoLinkArray = pyContent('.yt-lockup-video').map(lambda i, e: youtube_url_prefix + PyQuery(e).attr('data-context-item-id'))
         ret['videoLinks'] = videoLinkArray
 
-        currentPageNumber = getCurrentPageNumber(pyContent)
         if(currentPageNumber != None):
             searchLinkArray = pyContent('.search-pager a').map(lambda i, e: getPageLinkIfValid(e, currentPageNumber))
             searchLinkArray = list(set(searchLinkArray))
+
+        logger.info('[LinkExtractor] Detected %d videos and %d pages for Page-%d', len(videoLinkArray), len(searchLinkArray), currentPageNumber)
 
         ret['searchLinks'] = searchLinkArray
     return ret
@@ -40,7 +41,7 @@ def getPageLinkIfValid(element, currentPageNumber):
         return None
 
     pageNumber = int(pageNumberText)
-    if currentPageNumber < pageNumber <= runtime_search_max_page_number:
+    if currentPageNumber < pageNumber <= Configuration.runtime_search_max_page_number:
         return 'https://www.youtube.com' + pyElement.attr('href')
     return None
 
@@ -57,6 +58,7 @@ def extractLinkWorker(pendingSearchLinks):
         searchLinks = extractInfo['searchLinks']
 
         if videoLinks is not None:
+            logger.info('[LinkExtractor] Add video links to db: [%s]', ' ,\n'.join(videoLinks))
             # Add video links to db
             for videoLink in videoLinks:
                 videoInfo = VideoInfo()
@@ -64,8 +66,7 @@ def extractLinkWorker(pendingSearchLinks):
                 try:
                     DownloadInfoService.addVideoInfo(videoInfo)
                 except DuplicateError:
-                    logging.info("URL [%s] has been already added.", videoInfo.url)
-            logger.info('[LinkExtractor] Add video links to db: [%s]', ' , '.join(videoLinks))
+                    logging.info("[LinkExtractor] URL [%s] has been already in DB.", videoInfo.url)
 
         newSearchLinks = [];
         if searchLinks is not None:
@@ -97,9 +98,7 @@ def start():
     pendingSearchLinks = []
     pendingSearchLinks.append(getSearchPageURL())
 
-    downloadThread = Thread(target=extractLinkWorker, args=(pendingSearchLinks, ))
-    downloadThread.setDaemon(True)
-    downloadThread.start()
+    extractorThread = Thread(target=extractLinkWorker, name='Extractor', args=(pendingSearchLinks, ))
+    extractorThread.setDaemon(True)
+    extractorThread.start()
     logger.info('[LinkExtractor] Producer has been started.')
-
-    return downloadThread
