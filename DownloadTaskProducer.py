@@ -11,7 +11,7 @@ def downloadTaskProducer():
     while True:
         if videoLinkQ.qsize() > queue_size_valve_to_fetch_download_task:
             logging.debug('[Download Producer] Queue size %d, is enough for download, sleep %d second to check queue size',
-                          videoLinkQ.qsize(), queue_size_check_interval)
+                          len(videoLinkQ), queue_size_check_interval)
             time.sleep(queue_size_check_interval)
             continue
 
@@ -26,7 +26,7 @@ def downloadTaskProducer():
         for item in videoArray:
             videoLinkQ.put(item)
         logging.info('[Download Producer] Put %d tasks into download queue, current size is %d',
-                     len(videoArray), videoLinkQ.qsize())
+                     len(videoArray), len(videoLinkQ))
 
         DownloadInfoService.batchMarkProcessingFlag(videoArray)
         logging.debug('[Download Producer] Mark new added video info to be processing status.')
