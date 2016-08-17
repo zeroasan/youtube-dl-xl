@@ -10,7 +10,7 @@ import Configuration
 # TODO remove log config
 import LogConfig
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('['+__name__+']')
 
 youtube_url_prefix = 'https://www.youtube.com/watch?v='
 

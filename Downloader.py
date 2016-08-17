@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import time, logging, threading, json, copy, youtube_dl
 import DownloadInfoService
 import Configuration
@@ -12,12 +13,13 @@ ydl_option = {
     'simulate': True
 }
 
-def download(url):
+def download(item):
     try:
+        url = item.url
         #copy an instance
         runtime_ydl_option = copy.copy(ydl_option)
 
-        runtime_ydl_option['outtmpl'] = Configuration.getDownloadPath() + '/%(title)s-%(id)s.%(ext)s'
+        runtime_ydl_option['outtmpl'] = Configuration.getDownloadPath() + '/%(id)s-%(title)s.%(ext)s'
         ydl = youtube_dl.YoutubeDL(runtime_ydl_option)
 
         #process = subprocess.check_output(['youtube-dl', "-o downloads/video/%(uploader)s/%(title)s-%(id)s.%(ext)s", url], stderr=subprocess.STDOUT,shell=True)
@@ -29,7 +31,7 @@ def download(url):
 
         logging.info('[%s] after extract info', threading.currentThread().name)
 
-        jsonFileName = Configuration.getDownloadPath() + '/{0}-({1}).json'.format(info['title'], info['id'])
+        jsonFileName = Configuration.getDownloadPath() + '/{0}-{1}.json'.format(info['id'], info['title'])
 
         with open(jsonFileName, 'w') as f:
             json.dump(info, f, indent=1)
@@ -51,7 +53,7 @@ def download_worker():
         # threadLock.acquire()
         item = videoLinkQ.get()
         # threadLock.release()
-        download(item.url)
+        download(item)
         videoLinkQ.task_done()
 
 def start():
