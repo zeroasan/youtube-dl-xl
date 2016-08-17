@@ -27,7 +27,7 @@ def download(item):
         #info = ydl.extract_info(url=url, download=False)
         info = ydl.extract_info(url=url)
         # Reduce the json info by removing unused format information
-        info['formats'] = None
+        #info['formats'] = None
 
         logging.info('[%s] after extract info', threading.currentThread().name)
 
@@ -52,9 +52,11 @@ def download_worker():
     while True:
         # threadLock.acquire()
         item = videoLinkQ.get()
+        videoLinkQ.task_done()
         # threadLock.release()
         download(item)
-        videoLinkQ.task_done()
+
+
 
 def start():
     for i in range(Configuration.runtime_num_of_download_worker):
